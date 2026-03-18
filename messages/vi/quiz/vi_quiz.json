@@ -1,0 +1,100 @@
+{
+  "quiz": {
+    "teacher": {
+      "tab": {
+        "question": "Câu hỏi",
+        "overview": "Tổng quan"
+      },
+      "header": {
+        "quiz": "Bài kiểm tra",
+        "question": "Câu hỏi",
+        "passRate": "Tỉ lệ vượt qua",
+        "submission": "Bài nộp",
+        "time": "Thời gian",
+        "mins": "phút"
+      },
+      "answerTable": {
+        "submitted": "Nộp vào: ",
+        "head": "Học viên",
+        "point": "Điểm:",
+        "accuracy": "Điểm trung bình",
+        "answered": "Đã trả lời",
+        "question": "Câu hỏi",
+        "correct": "Đúng",
+        "incorrect": "Sai",
+        "skip": "Bỏ qua",
+        "correctAnswer": "Đáp án đúng"
+      },
+      "questionTab": {
+        "description": "Tab này hiển thị dữ liệu tổng hợp từ tất cả lượt làm bài của học viên.",
+        "statistic": "Thống kê",
+        "resp": "lượt trả lời"
+      }
+    },
+    "student": {},
+    "upsert": {
+      "create": "Tạo bài kiểm tra",
+      "update": "Cập nhật bài kiểm tra",
+      "settings": "Bài kiểm tra",
+      "form": {
+        "title": "Tiêu đề",
+        "titlePlaceholder": "Nhập tiêu đề bài kiểm tra",
+        "description": "Mô tả",
+        "descriptionPlaceholder": "Nhập mô tả bài kiểm tra",
+        "durationDays": "Thời lượng (ngày)",
+        "timeLimitMinutes": "Thời gian (phút)",
+        "cooldownHours": "Thời gian chờ (giờ)",
+        "totalMarks": "Tổng điểm",
+        "passingMarks": "Điểm đạt",
+        "updateQuizInfo": "Cập nhật bài trắc nghiệm",
+        "question": {
+          "question": "Câu hỏi",
+          "saveQuestions": "Lưu câu hỏi",
+          "multipleChoice": "Chọn nhiều đáp án",
+          "trueFalse": "Chọn đúng/sai",
+          "singleChoice": "Chọn một đáp",
+          "enterQuestion": "Nhập câu hỏi tại đây",
+          "answer": "Đáp án",
+          "dragToReorder": "Kéo để sắp xếp lại các lựa chọn",
+          "addOption": "Thêm lựa chọn",
+          "explanation": "Giải thích",
+          "optional": "Tùy chọn"
+        }
+      }
+    },
+    "import": {
+      "title": "Nhập Quiz",
+      "button": "Tải lên (CSV)",
+      "headerTitle": "Tải lên câu hỏi trắc nghiệm từ tệp CSV",
+      "headerDescription": "Tải lên tệp CSV có định dạng đúng để thêm nhiều câu hỏi trắc nghiệm cùng lúc."
+    },
+    "detail": {
+      "passingMarks": "Điểm đạt",
+      "maxAttempt": "Số lần làm tối đa",
+      "timeLimit": "Giới hạn thời gian",
+      "mins": "phút",
+      "length": "Độ dài",
+      "noData": "Không có dữ liệu quiz",
+      "startedAt": "Bắt đầu lúc",
+      "completedAt": "Kết thúc lúc",
+      "duration": "Thời gian thực hiện",
+      "status": "Trạng thái",
+      "correctAnswers": "Số câu đúng",
+      "score": "Điểm số",
+      "yourFinalScore": "Điểm cuối cùng của bạn",
+      "attemptHistory": "Lịch sử làm bài",
+      "submissionDate": "Ngày nộp bài",
+      "noAttempts": "Chưa có lần làm bài nào.",
+      "resultDetail": "Chi tiết kết quả",
+      "complete": "Hoàn thành",
+      "incomplete": "Chưa hoàn thành",
+      "question": {
+        "question": "Câu hỏi",
+        "singlechoice": "Chọn một đáp án",
+        "multiplechoice": "Chọn nhiều đáp án",
+        "truefalse": "Đúng / Sai",
+        "pts": "điểm"
+      }
+    }
+  }
+}

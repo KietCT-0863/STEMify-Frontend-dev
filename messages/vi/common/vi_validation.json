@@ -1,0 +1,122 @@
+{
+  "validation": {
+    "required": "Thông tin này là bắt buộc",
+    "user": {
+      "name": "Tên phải bắt đầu bằng chữ cái in hoa",
+      "nameLength": "Tên phải có ít nhất {length} ký tự",
+      "surname": "Họ phải bắt đầu bằng chữ cái in hoa",
+      "surnameLength": "Họ phải có ít nhất {length} ký tự",
+      "email": "Địa chỉ email không hợp lệ",
+      "userName": "Tên người dùng phải có ít nhất {length} ký tự",
+      "password": "Mật khẩu phải có ít nhất {length} ký tự",
+      "passwordRequired": "Không được để trống ô mật khẩu",
+      "firstName": "Tên không được để trống",
+      "lastName": "Họ không được để trống"
+    },
+    "content": {
+      "length": "Nội dung phải có ít nhất 50 ký tự văn bản (không bao gồm Markdown và khoảng trắng)",
+      "sectionId": "ID chuyên mục phải là một số dương"
+    },
+    "ageRange": {
+      "min": "Tuổi tối thiểu phải ít nhất là 6",
+      "max": "Tuổi tối đa phải ít nhất là 6",
+      "maxMin": "Tuổi tối đa phải lớn hơn tuổi tối thiểu"
+    },
+    "category": {
+      "name": "Tên danh mục không được để trống!"
+    },
+    "skill": {
+      "length": "Tên kỹ năng phải có ít nhất {length} ký tự"
+    },
+    "course": {
+      "code": "Ít nhất {length} ký tự",
+      "title": "Ít nhất {length} ký tự",
+      "studentTasks": "Ít nhất {length} ký tự",
+      "description": "Ít nhất {length} ký tự",
+      "ageRangeId": "Độ tuổi phù hợp với khóa học (bắt buộc)",
+      "image": "Ảnh bìa là bắt buộc",
+      "imgSize": "Tối đa {size}MB được phép",
+      "priceMin": "Giá khóa học ít nhất {min} VND"
+    },
+    "curriculum": {
+      "code": "Mã khóa học, ít nhất {length} ký tự, dùng để nhận dạng khóa học",
+      "title": "Tên khóa học, ít nhất {length} ký tự",
+      "description": "Mô tả chi tiết của khóa học, ít nhất {length} ký tự",
+      "imageSize": "Tối đa {size}MB được phép",
+      "imageUrl": "Ảnh bìa là bắt buộc"
+    },
+    "learningOutcome": {
+      "minLength": "Trường này phải có ít nhất {min} ký tự.",
+      "maxLength": "Trường này phải có tối đa {max} ký tự."
+    },
+    "lesson": {
+      "title": "Tiêu đề phải có ít nhất {length} ký tự",
+      "description": "Mô tả phải có ít nhất {length} ký tự",
+      "courseId": "ID khóa học phải là một số dương",
+      "learningOutcome": "Kết quả học tập phải có ít nhất {length} ký tự",
+      "imageSize": "Tối đa {size}MB được phép",
+      "imageUrl": "Ảnh bìa là bắt buộc"
+    },
+    "section": {
+      "title": "Tiêu đề không được để trống",
+      "description": "Mô tả không được để trống",
+      "duration": "Thời lượng phải là một số không âm",
+      "lessonId": "ID bài học phải là một số dương"
+    },
+    "component": {
+      "name": "Tên thành phần không được để trống",
+      "type": "Loại thành phần là bắt buộc",
+      "imageSize": "Tối đa {size}MB được phép",
+      "imageUrl": "Ảnh thành phần là bắt buộc",
+      "image": "Tệp ảnh không hợp lệ"
+    },
+    "organization": {
+      "name": "Tên tổ chức không được để trống",
+      "description": "Mô tả phải có ít nhất 10 ký tự",
+      "type": "Loại tổ chức không được để trống",
+      "imageSize": "Tối đa {size}MB được phép",
+      "imageUrl": "Ảnh tổ chức là bắt buộc"
+    },
+    "plan": {
+      "name": "Tên gói là bắt buộc",
+      "description": "Mô tả phải có ít nhất {min} ký tự",
+      "price": "Giá phải là một số không âm",
+      "billingCycle": "Chu kỳ thanh toán là bắt buộc",
+      "accessSupportDetail": "Chi tiết hỗ trợ truy cập phải có ít nhất {min} ký tự",
+      "curriculumCount": "Số lượng chương trình giảng dạy ít nhất là {min}",
+      "maxTeacherSeats": "Số chỗ giáo viên tối đa ít nhất là {min}",
+      "maxStudentSeats": "Số chỗ học sinh tối đa ít nhất là {min}",
+      "curriculumIds": "Chọn ít nhất một chương trình giảng dạy",
+      "curriculumCountExceed": "Số lượng chương trình giảng dạy ({curriculumCount}) không được vượt quá số chương trình giảng dạy đã chọn ({selectedCurriculums})"
+    },
+    "subscription": {
+      "plan": "Chọn một gói",
+      "startDate": "Ngày bắt đầu là bắt buộc",
+      "seats": "Số chỗ phải ít nhất là 10",
+      "pricePlan": "Kế hoạch giá là bắt buộc",
+      "expiredDate": "Ngày hết hạn phải là một ngày hợp lệ trong tương lai",
+      "curriculumIds": "Chọn ít nhất một chương trình giảng dạy",
+      "allowCurriculumExceed": "Bạn chỉ có thể chọn tối đa {curriculumCount} chương trình giảng dạy"
+    },
+    "uploadCSV": {
+      "required": "Hãy tải lên một tệp CSV"
+    },
+    "assignment": {
+      "title": "Tiêu đề là bắt buộc và phải có ít nhất {length} ký tự",
+      "totalScore": "Tổng điểm phải là một số dương",
+      "passingScore": "Điểm đạt phải là một số dương và không được vượt quá tổng điểm",
+      "durationDays": "Thời gian làm bài phải là một số dương",
+      "cooldownHours": "Thời gian chờ giữa các lần làm bài phải là một số không âm",
+      "questionsMin": "Phải có ít nhất {min} câu hỏi trong bài tập"
+    },
+    "quiz": {
+      "title": "Hãy nhập tiêu đề",
+      "description": "Hãy nhập mô tả",
+      "passingMarks": "Điểm đạt phải nằm trong khoảng từ 0 đến 100",
+      "durationDays": "Thời gian làm bài phải là một số dương",
+      "totalMarks": "Tổng điểm phải là một số dương",
+      "timeLimitMinutes": "Giới hạn thời gian (tính bằng phút) phải là một số dương",
+      "cooldownHours": "Thời gian chờ giữa các lần làm bài (tính bằng giờ) phải là một số không âm"
+    }
+  }
+}

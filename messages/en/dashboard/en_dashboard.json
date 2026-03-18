@@ -1,0 +1,163 @@
+{
+  "dashboard": {
+    "classroom": {
+      "submission": "Submissions",
+      "passRate": "Pass Rate",
+      "passed": "Passed",
+      "failed": "Not Pass",
+      "score": "Average Score",
+      "overview": {
+        "title": "Dashboard Overview",
+        "subTitle": "Track learning progress and quiz performance",
+        "quizStat": "Quiz Statistic",
+        "performance": "Performance Overview",
+        "tooltip": "Identify students with the slowest learning progress by AI.",
+        "asmStat": "Assignment Statistic",
+        "legendSummary": {
+          "quizPass": "Quiz Pass",
+          "asmPass": "Asm Pass",
+          "notPass": "Not Pass"
+        },
+        "histogram": {
+          "title": "Course Histogram",
+          "studentCount": "Student Count",
+          "scoreDistribution": "Score Distribution",
+          "number": "Number of Students",
+          "scoreRange": "Score Range"
+        },
+        "ungraded": {
+          "title": "Ungraded Assignment",
+          "pending": "pending",
+          "noAsm": "No pending assignments to grade.",
+          "id": "Id",
+          "asmTitle": "Assignment Title",
+          "learner": "Learner",
+          "action": "Action"
+        },
+        "progress": {
+          "title": "Student Progress",
+          "lesson": "Lessons in",
+          "sort": "Sort by:",
+          "disName": "Display Name",
+          "noLesson": "No lessons found for this course.",
+          "firstName": "First Name",
+          "lastName": "Last Name"
+        }
+      },
+      "course": {
+        "title": "Course",
+        "lessons": "lessons",
+        "schedule": "Classroom Schedule",
+        "duration": "Duration/weeks:",
+        "min": "phút",
+        "week": "Week",
+        "totalWeek": "Total Weeks"
+      },
+      "quiz": {
+        "overviewTab": "Overview",
+        "activeTab": "Active",
+        "overview": {
+          "enroll": "Enrolled",
+          "accuracy": "Accuracy",
+          "completeRate": "Completion Rate",
+          "question": "Question(s)"
+        },
+        "active": {
+          "name": "Quiz Name",
+          "learner": "Learners",
+          "accuracy": "Accuracy",
+          "date": "Due Date",
+          "action": "Actions"
+        }
+      },
+      "assignment": {
+        "learner": "Learners",
+        "name": "Assignment Name",
+        "action": "Actions",
+        "question": "Question(s)"
+      }
+    },
+    "organization": {
+      "heroSec": {
+        "hi": "Hello",
+        "title": "What do you want to track today with your organization?",
+        "subTitle": "Understand organization, track progress, and manage your organization successfully."
+      },
+      "passed": "Passed",
+      "failed": "Not Passed",
+      "score": "Average Score",
+      "passRate": "Pass Rate",
+      "totalCurriculum": "Total Curriculums",
+      "totalClass": "Total classrooms",
+      "cert": "Earned Certificate",
+      "sup": "Community Support",
+      "user": "Total Users",
+      "teacher": "Total Teachers",
+      "student": "Total Students",
+      "people": "People",
+      "enrollment": "Enrollment Change",
+      "feedback": "Feedback",
+      "feedbackDetail": "student suggested more frequent communication and feedback from management",
+      "change": "Change",
+      "curriculumStat": {
+        "title": "Curriculum Statistics"
+      },
+      "classroomStat": {
+        "title": "Classroom Statistics",
+        "code": "Curriculum Code",
+        "currTitle": "Curriculum Title",
+        "name": "Name"
+      }
+    },
+    "admin": {
+      "title": "System Dashboard",
+      "subtitle": "Overview of system performance and revenue",
+      "period": {
+        "placeholder": "Select period",
+        "month": "Month",
+        "quarter": "Quarter",
+        "year": "Year"
+      },
+      "stats": {
+        "revenue": "Total Revenue",
+        "compare": "vs previous period",
+        "activeOrg": "Active Organizations",
+        "growth": "Growth",
+        "totalStudent": "Total Students",
+        "enrollment": "Enrollments",
+        "completionRate": "Completion Rate"
+      },
+      "charts": {
+        "revenueByPlan": "Revenue by Plan",
+        "revenueDesc": "Revenue distribution based on subscription plans",
+        "planDetail": "Subscription Plan Details",
+        "planDetailDesc": "Current subscription plan status",
+        "totalPlan": "Total Plans",
+        "active": "Active",
+        "expired": "Expired",
+        "noData": "No revenue data available"
+      },
+      "tables": {
+        "topOrg": "Top Organizations",
+        "topOrgDesc": "Organizations with the largest student body",
+        "topCourse": "Top Courses",
+        "topCourseDesc": "Most popular courses in the system",
+        "headers": {
+           "orgName": "Organization Name",
+           "students": "Students",
+           "enrollments": "Enrollments",
+           "passRate": "Pass Rate",
+           "activeSub": "Active Subs",
+           "courseName": "Course Name",
+           "classrooms": "Classrooms",
+           "avgScore": "Avg Score",
+           "completion": "Completion"
+        },
+        "placeholders": {
+            "org": "No organization data",
+            "course": "No course data"
+        }
+      }
+    }
+  }
+}

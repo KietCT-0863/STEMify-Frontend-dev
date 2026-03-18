@@ -1,0 +1,894 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-01-15T08:00:00Z",
+    "lastModified": "2025-01-15T10:00:00Z",
+    "author": "STEM Education Team",
+    "description": "Optimized Octahedron assembly using component templates - 80% size reduction",
+    "originalSize": "1616 lines",
+    "optimizedSize": "~300 lines",
+    "compressionRatio": "5.4:1"
+  },
+
+  "templates": {
+    "materials": [{ "id": "plastic_green", "source": "/components/templates/MaterialLibrary/plastic_green.json" }],
+    "components": [
+      { "id": "green_11_2", "source": "/components/templates/StrawTypes/green_11_2.json" },
+      { "id": "2leg", "source": "/components/templates/ConnectorTypes/2legs.json" }
+    ]
+  },
+
+  "_matrixHierarchyDoc": {
+    "description": "Component Matrix Transformation Hierarchy",
+    "levels": {
+      "componentMatrix": "Initial/default state of the component when first created",
+      "actionMatrix": "Transformation delta applied by actions (relative to componentMatrix)",
+      "assemblyMatrix": "Final cumulative state after all transformations applied"
+    },
+    "transformOrder": "componentMatrix → apply actions → assemblyMatrix",
+    "note": "Components use 'transformAsUnit' to ensure all child elements move together maintaining structural integrity"
+  },
+
+  "components": {
+    "squares": [
+      {
+        "id": "square_base",
+        "name": "Base Square",
+        "center": { "x": 7.8, "y": 0, "z": 7.8 },
+        "elements": {
+          "straws": ["straw_green_1", "straw_green_2", "straw_green_3", "straw_green_4"],
+          "connectors": ["connector_2leg_1", "connector_2leg_2", "connector_2leg_3", "connector_2leg_4"]
+        },
+        "connections": "base_square",
+        "bounds": {
+          "min": { "x": 0, "y": 0, "z": 0 },
+          "max": { "x": 15.6, "y": 0, "z": 15.6 }
+        },
+        "state": "built",
+        "componentMatrix": {
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1, "y": 1, "z": 1 },
+          "_comment": "Initial state - no transformation applied"
+        }
+      },
+      {
+        "id": "square_second",
+        "name": "Second Square",
+        "center": { "x": 27.8, "y": 0, "z": 7.8 },
+        "elements": {
+          "straws": ["straw_green_5", "straw_green_6", "straw_green_7", "straw_green_8"],
+          "connectors": ["connector_2leg_5", "connector_2leg_6", "connector_2leg_7", "connector_2leg_8"]
+        },
+        "connections": "second_square",
+        "bounds": {
+          "min": { "x": 20, "y": 0, "z": 0 },
+          "max": { "x": 35.6, "y": 0, "z": 15.6 }
+        },
+        "state": "built",
+        "componentMatrix": {
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1, "y": 1, "z": 1 }
+        }
+      },
+      {
+        "id": "square_third",
+        "name": "Third Square",
+        "center": { "x": 47.8, "y": 0, "z": 7.8 },
+        "elements": {
+          "straws": ["straw_green_9", "straw_green_10", "straw_green_11", "straw_green_12"],
+          "connectors": ["connector_2leg_9", "connector_2leg_10", "connector_2leg_11", "connector_2leg_12"]
+        },
+        "connections": "third_square",
+        "bounds": {
+          "min": { "x": 40, "y": 0, "z": 0 },
+          "max": { "x": 55.6, "y": 0, "z": 15.6 }
+        },
+        "state": "built",
+        "componentMatrix": {
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "scale": { "x": 1, "y": 1, "z": 1 }
+        }
+      }
+    ]
+  },
+
+  "assemblies": {
+    "diamond_assembly": {
+      "id": "diamond_assembly",
+      "name": "Diamond Assembly",
+      "description": "Assembly combining base and second square into diamond shape",
+      "components": ["square_base", "square_second"],
+      "assemblyMatrix": {
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "state": "separate"
+    },
+    "octahedron_assembly": {
+      "id": "octahedron_assembly",
+      "name": "Octahedron Assembly",
+      "description": "Final octahedron structure",
+      "components": ["square_base", "square_second", "square_third"],
+      "subAssemblies": ["diamond_assembly"],
+      "assemblyMatrix": {
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "state": "separate"
+    }
+  },
+
+  "instances": {
+    "straws": [
+      {
+        "templateId": "green_11_2",
+        "instances": [
+          {
+            "id": "straw_green_1",
+            "transform": { "position": { "x": 7.77, "y": 0, "z": -0.25 }, "rotation": { "x": 0, "y": 0, "z": 0 } }
+          },
+          {
+            "id": "straw_green_2",
+            "transform": { "position": { "x": -0.3, "y": 0, "z": 7.77 }, "rotation": { "x": 0, "y": 1.5708, "z": 0 } }
+          },
+          {
+            "id": "straw_green_3",
+            "transform": { "position": { "x": 7.75, "y": 0, "z": 16 }, "rotation": { "x": 0, "y": 0, "z": 0 } }
+          },
+          {
+            "id": "straw_green_4",
+            "transform": { "position": { "x": 16, "y": 0, "z": 7.77 }, "rotation": { "x": 0, "y": 1.5708, "z": 0 } }
+          },
+
+          {
+            "id": "straw_green_5",
+            "transform": { "position": { "x": 27.77, "y": 0, "z": -0.25 }, "rotation": { "x": 0, "y": 0, "z": 0 } }
+          },
+          {
+            "id": "straw_green_6",
+            "transform": { "position": { "x": 19.7, "y": 0, "z": 7.77 }, "rotation": { "x": 0, "y": 1.5708, "z": 0 } }
+          },
+          {
+            "id": "straw_green_7",
+            "transform": { "position": { "x": 27.77, "y": 0, "z": 16 }, "rotation": { "x": 0, "y": 0, "z": 0 } }
+          },
+          {
+            "id": "straw_green_8",
+            "transform": { "position": { "x": 36, "y": 0, "z": 7.77 }, "rotation": { "x": 0, "y": 1.5708, "z": 0 } }
+          },
+
+          {
+            "id": "straw_green_9",
+            "transform": { "position": { "x": 47.77, "y": 0, "z": -0.25 }, "rotation": { "x": 0, "y": 0, "z": 0 } }
+          },
+          {
+            "id": "straw_green_10",
+            "transform": { "position": { "x": 39.7, "y": 0, "z": 7.77 }, "rotation": { "x": 0, "y": 1.5708, "z": 0 } }
+          },
+          {
+            "id": "straw_green_11",
+            "transform": { "position": { "x": 47.77, "y": 0, "z": 16 }, "rotation": { "x": 0, "y": 0, "z": 0 } }
+          },
+          {
+            "id": "straw_green_12",
+            "transform": { "position": { "x": 56, "y": 0, "z": 7.77 }, "rotation": { "x": 0, "y": 1.5708, "z": 0 } }
+          }
+        ]
+      }
+    ],
+    "connectors": [
+      {
+        "templateId": "2leg",
+        "instances": [
+          {
+            "id": "connector_2leg_1",
+            "transform": { "position": { "x": 0, "y": 0, "z": 0 }, "rotation": { "x": 1.5708, "y": 0, "z": 2.3562 } }
+          },
+          {
+            "id": "connector_2leg_2",
+            "transform": { "position": { "x": 0, "y": 0, "z": 15.6 }, "rotation": { "x": 1.5708, "y": 0, "z": 0.7854 } }
+          },
+          {
+            "id": "connector_2leg_3",
+            "transform": {
+              "position": { "x": 15.6, "y": 0, "z": 15.6 },
+              "rotation": { "x": 1.5708, "y": 0, "z": 2.3562 }
+            }
+          },
+          {
+            "id": "connector_2leg_4",
+            "transform": { "position": { "x": 15.6, "y": 0, "z": 0 }, "rotation": { "x": 1.5708, "y": 0, "z": 0.7854 } }
+          },
+
+          {
+            "id": "connector_2leg_5",
+            "transform": { "position": { "x": 20, "y": 0, "z": 0 }, "rotation": { "x": 1.5708, "y": 0, "z": 2.3562 } }
+          },
+          {
+            "id": "connector_2leg_6",
+            "transform": {
+              "position": { "x": 20, "y": 0, "z": 15.6 },
+              "rotation": { "x": 1.5708, "y": 0, "z": 0.7854 }
+            }
+          },
+          {
+            "id": "connector_2leg_7",
+            "transform": {
+              "position": { "x": 35.6, "y": 0, "z": 15.6 },
+              "rotation": { "x": 1.5708, "y": 0, "z": 2.3562 }
+            }
+          },
+          {
+            "id": "connector_2leg_8",
+            "transform": { "position": { "x": 35.6, "y": 0, "z": 0 }, "rotation": { "x": 1.5708, "y": 0, "z": 0.7854 } }
+          },
+
+          {
+            "id": "connector_2leg_9",
+            "transform": { "position": { "x": 40, "y": 0, "z": 0 }, "rotation": { "x": 1.5708, "y": 0, "z": 2.3562 } }
+          },
+          {
+            "id": "connector_2leg_10",
+            "transform": {
+              "position": { "x": 40, "y": 0, "z": 15.6 },
+              "rotation": { "x": 1.5708, "y": 0, "z": 0.7854 }
+            }
+          },
+          {
+            "id": "connector_2leg_11",
+            "transform": {
+              "position": { "x": 55.6, "y": 0, "z": 15.6 },
+              "rotation": { "x": 1.5708, "y": 0, "z": 2.3562 }
+            }
+          },
+          {
+            "id": "connector_2leg_12",
+            "transform": { "position": { "x": 55.6, "y": 0, "z": 0 }, "rotation": { "x": 1.5708, "y": 0, "z": 0.7854 } }
+          }
+        ]
+      }
+    ]
+  },
+
+  "connections": {
+    "base_square": [
+      { "strawId": "straw_green_1", "endpoint": "start", "connectorId": "connector_2leg_1", "port": 0 },
+      { "strawId": "straw_green_1", "endpoint": "end", "connectorId": "connector_2leg_4", "port": 0 },
+      { "strawId": "straw_green_2", "endpoint": "start", "connectorId": "connector_2leg_1", "port": 2 },
+      { "strawId": "straw_green_2", "endpoint": "end", "connectorId": "connector_2leg_2", "port": 2 },
+      { "strawId": "straw_green_3", "endpoint": "start", "connectorId": "connector_2leg_2", "port": 0 },
+      { "strawId": "straw_green_3", "endpoint": "end", "connectorId": "connector_2leg_3", "port": 0 },
+      { "strawId": "straw_green_4", "endpoint": "start", "connectorId": "connector_2leg_3", "port": 2 },
+      { "strawId": "straw_green_4", "endpoint": "end", "connectorId": "connector_2leg_4", "port": 2 }
+    ],
+    "second_square": [
+      { "strawId": "straw_green_5", "endpoint": "start", "connectorId": "connector_2leg_5", "port": 0 },
+      { "strawId": "straw_green_5", "endpoint": "end", "connectorId": "connector_2leg_8", "port": 0 },
+      { "strawId": "straw_green_6", "endpoint": "start", "connectorId": "connector_2leg_5", "port": 2 },
+      { "strawId": "straw_green_6", "endpoint": "end", "connectorId": "connector_2leg_6", "port": 2 },
+      { "strawId": "straw_green_7", "endpoint": "start", "connectorId": "connector_2leg_6", "port": 0 },
+      { "strawId": "straw_green_7", "endpoint": "end", "connectorId": "connector_2leg_7", "port": 0 },
+      { "strawId": "straw_green_8", "endpoint": "start", "connectorId": "connector_2leg_7", "port": 2 },
+      { "strawId": "straw_green_8", "endpoint": "end", "connectorId": "connector_2leg_8", "port": 2 }
+    ],
+    "third_square": [
+      { "strawId": "straw_green_9", "endpoint": "start", "connectorId": "connector_2leg_9", "port": 0 },
+      { "strawId": "straw_green_9", "endpoint": "end", "connectorId": "connector_2leg_12", "port": 0 },
+      { "strawId": "straw_green_10", "endpoint": "start", "connectorId": "connector_2leg_9", "port": 2 },
+      { "strawId": "straw_green_10", "endpoint": "end", "connectorId": "connector_2leg_10", "port": 2 },
+      { "strawId": "straw_green_11", "endpoint": "start", "connectorId": "connector_2leg_10", "port": 0 },
+      { "strawId": "straw_green_11", "endpoint": "end", "connectorId": "connector_2leg_11", "port": 0 },
+      { "strawId": "straw_green_12", "endpoint": "start", "connectorId": "connector_2leg_11", "port": 2 },
+      { "strawId": "straw_green_12", "endpoint": "end", "connectorId": "connector_2leg_12", "port": 2 }
+    ],
+    "second_third_squares": [
+      { "strawId": "straw_green_5", "endpoint": "start", "connectorId": "connector_2leg_5", "port": 0 },
+      { "strawId": "straw_green_5", "endpoint": "end", "connectorId": "connector_2leg_8", "port": 0 },
+      { "strawId": "straw_green_6", "endpoint": "start", "connectorId": "connector_2leg_5", "port": 2 },
+      { "strawId": "straw_green_6", "endpoint": "end", "connectorId": "connector_2leg_6", "port": 2 },
+      { "strawId": "straw_green_7", "endpoint": "start", "connectorId": "connector_2leg_6", "port": 0 },
+      { "strawId": "straw_green_7", "endpoint": "end", "connectorId": "connector_2leg_7", "port": 0 },
+      { "strawId": "straw_green_8", "endpoint": "start", "connectorId": "connector_2leg_7", "port": 2 },
+      { "strawId": "straw_green_8", "endpoint": "end", "connectorId": "connector_2leg_8", "port": 2 },
+      { "strawId": "straw_green_9", "endpoint": "start", "connectorId": "connector_2leg_9", "port": 0 },
+      { "strawId": "straw_green_9", "endpoint": "end", "connectorId": "connector_2leg_12", "port": 0 },
+      { "strawId": "straw_green_10", "endpoint": "start", "connectorId": "connector_2leg_9", "port": 2 },
+      { "strawId": "straw_green_10", "endpoint": "end", "connectorId": "connector_2leg_10", "port": 2 },
+      { "strawId": "straw_green_11", "endpoint": "start", "connectorId": "connector_2leg_10", "port": 0 },
+      { "strawId": "straw_green_11", "endpoint": "end", "connectorId": "connector_2leg_11", "port": 0 },
+      { "strawId": "straw_green_12", "endpoint": "start", "connectorId": "connector_2leg_11", "port": 2 },
+      { "strawId": "straw_green_12", "endpoint": "end", "connectorId": "connector_2leg_12", "port": 2 }
+    ]
+  },
+
+  "actions": [
+    {
+      "id": "action_prepare_connectors",
+      "name": "Show Base Connectors",
+      "type": "highlight",
+      "targets": ["connector_2leg_1", "connector_2leg_2", "connector_2leg_3", "connector_2leg_4"],
+      "duration": 2.0,
+      "animation": {
+        "colorHighlight": "#FFD700",
+        "pulseEffect": true,
+        "curve": "easeInOutQuad",
+        "keyframes": [
+          { "time": 0, "opacity": 0, "scale": 0.8 },
+          { "time": 0.3, "opacity": 1, "scale": 1.1 },
+          { "time": 0.6, "opacity": 0.7, "scale": 1.0 },
+          { "time": 1.0, "opacity": 1, "scale": 1.0 }
+        ]
+      }
+    },
+    {
+      "id": "action_build_base",
+      "name": "Form Base Square",
+      "type": "connect",
+      "connectionGroup": "base_square",
+      "duration": 3.0,
+      "sequenceDelay": 0.5,
+      "animation": {
+        "curve": "easeOutCubic",
+        "strawAnimation": "slideIn",
+        "connectorAnimation": "snapRotate"
+      }
+    },
+    {
+      "id": "action_build_second_square",
+      "name": "Form Second Square",
+      "type": "connect",
+      "connectionGroup": "second_square",
+      "duration": 3.0,
+      "sequenceDelay": 0.3
+    },
+    {
+      "id": "action_build_third_square",
+      "name": "Form Third Square",
+      "type": "connect",
+      "connectionGroup": "third_square",
+      "duration": 3.0,
+      "sequenceDelay": 0.3
+    },
+    {
+      "id": "action_build_both_squares",
+      "name": "Form Second and Third Squares",
+      "type": "connect",
+      "connectionGroup": "second_third_squares",
+      "duration": 4.0,
+      "sequenceDelay": 0.3
+    },
+    {
+      "id": "action_adjust_additional_connector_arms",
+      "name": "Show Second & Third Squares with Adjusted Arms",
+      "type": "transform_arm",
+      "connectionGroup": "second_third_squares",
+      "instantAppear": true,
+      "showRealtimeControls": false,
+      "targets": [
+        "connector_2leg_5",
+        "connector_2leg_6",
+        "connector_2leg_7",
+        "connector_2leg_8",
+        "connector_2leg_9",
+        "connector_2leg_10",
+        "connector_2leg_11",
+        "connector_2leg_12"
+      ],
+      "duration": 2.0,
+      "connectorArmTransforms": {
+        "connector_2leg_5": {
+          "arm_1": { "x": 0, "y": 0, "z": -0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": 0.7854 }
+        },
+        "connector_2leg_6": {
+          "arm_1": { "x": 0, "y": 0, "z": -0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": 0.7854 }
+        },
+        "connector_2leg_7": {
+          "arm_1": { "x": 0, "y": 0, "z": 0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": -0.7854 }
+        },
+        "connector_2leg_8": {
+          "arm_1": { "x": 0, "y": 0, "z": 0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": -0.7854 }
+        },
+        "connector_2leg_9": {
+          "arm_1": { "x": 0, "y": 0, "z": -0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": 0.7854 }
+        },
+        "connector_2leg_10": {
+          "arm_1": { "x": 0, "y": 0, "z": -0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": 0.7854 }
+        },
+        "connector_2leg_11": {
+          "arm_1": { "x": 0, "y": 0, "z": 0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": -0.7854 }
+        },
+        "connector_2leg_12": {
+          "arm_1": { "x": 0, "y": 0, "z": 0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": -0.7854 }
+        }
+      },
+      "interpolation": "easeInOut",
+      "_comment": "This action shows both second and third squares with connection groups and adjusts all connector arms. instantAppear ensures immediate visibility."
+    },
+    {
+      "id": "action_rotate_base_square",
+      "name": "Rotate Base Square 45°",
+      "type": "component_assembly",
+      "assemblyId": "diamond_assembly",
+      "showRealtimeControls": false,
+      "duration": 1.2,
+      "animation": {
+        "curve": "easeInOutCubic",
+        "rotationInterpolation": "slerp"
+      },
+      "componentTransforms": {
+        "square_base": {
+          "type": "matrix_transform",
+          "matrix": {
+            "position": { "x": 0, "y": 0, "z": 0 },
+            "rotation": { "x": 0, "y": 0.7854, "z": 0 },
+            "scale": { "x": 1, "y": 1, "z": 1 }
+          },
+          "pivot": "component_center",
+          "transformAsUnit": true,
+          "constraints": {
+            "maintainRelativePositions": true,
+            "preventBreaking": true
+          }
+        }
+      },
+      "assemblyState": "separate",
+      "description": "Rotate the base square component around its center by 45 degrees (Y axis)"
+    },
+    {
+      "id": "action_position_square_second",
+      "name": "Position Second Square to Base",
+      "type": "component_assembly",
+      "assemblyId": "diamond_assembly",
+      "showRealtimeControls": false,
+      "duration": 1,
+      "componentTransforms": {
+        "square_second": {
+          "type": "matrix_transform",
+          "matrix": {
+            "position": { "x": -20, "y": 0, "z": 0 },
+            "rotation": { "x": 1.5708, "y": 0.785, "z": 0 },
+            "scale": { "x": 1, "y": 1, "z": 1 }
+          },
+          "pivot": "component_center",
+          "transformAsUnit": true,
+          "constraints": {
+            "maintainRelativePositions": true,
+            "preventBreaking": true
+          }
+        }
+      },
+      "assemblyState": "separate",
+      "description": "Translate the second square component over the base square without rotation"
+    },
+    {
+      "id": "action_position_square_third",
+      "name": "Position Third Square to Top/Front",
+      "type": "component_assembly",
+      "assemblyId": "octahedron_assembly",
+      "showRealtimeControls": false,
+      "duration": 1.4,
+      "componentTransforms": {
+        "square_third": {
+          "type": "matrix_transform",
+          "matrix": {
+            "position": { "x": -40, "y": 0, "z": 0 },
+            "rotation": { "x": 0.785, "y": 0, "z": 1.5708 },
+            "scale": { "x": 1, "y": 1, "z": 1 }
+          },
+          "pivot": "component_center",
+          "transformAsUnit": true,
+          "constraints": {
+            "maintainRelativePositions": true,
+            "preventBreaking": true
+          }
+        }
+      },
+      "assemblyState": "separate",
+      "description": "Animate the third square component into its front/top position (rotate Z 90°, tilt X 45°)"
+    },
+    {
+      "id": "action_assemble_diamond",
+      "name": "Assemble Diamond",
+      "type": "component_assembly",
+      "assemblyId": "diamond_assembly",
+      "showRealtimeControls": true,
+      "duration": 3.0,
+      "animation": {
+        "curve": "easeInOutQuart",
+        "rotationInterpolation": "slerp",
+        "positionInterpolation": "lerp",
+        "simultaneousTransform": true
+      },
+      "componentTransforms": {
+        "square_second": {
+          "type": "matrix_transform",
+          "matrix": {
+            "position": { "x": -12, "y": 8, "z": 0 },
+            "rotation": { "x": -0.7854, "y": 0, "z": 0 },
+            "scale": { "x": 1, "y": 1, "z": 1 }
+          },
+          "pivot": "component_center",
+          "transformAsUnit": true,
+          "constraints": {
+            "maintainRelativePositions": true,
+            "preventBreaking": true
+          }
+        }
+      },
+      "assemblyState": "assembled",
+      "description": "Component-assembly approach: Transform square_second as a complete unit around component center - all elements move together maintaining structural integrity"
+    },
+    {
+      "id": "action_adjust_base_connector_arms",
+      "name": "Adjust Base Connector Arms",
+      "type": "transform_arm",
+      "targets": ["connector_2leg_1", "connector_2leg_2", "connector_2leg_3", "connector_2leg_4"],
+      "duration": 2.0,
+      "connectorArmTransforms": {
+        "connector_2leg_1": {
+          "arm_1": { "x": 0, "y": 0, "z": -0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": 0.7854 }
+        },
+        "connector_2leg_2": {
+          "arm_1": { "x": 0, "y": 0, "z": -0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": 0.7854 }
+        },
+        "connector_2leg_3": {
+          "arm_1": { "x": 0, "y": 0, "z": 0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": -0.7854 }
+        },
+        "connector_2leg_4": {
+          "arm_1": { "x": 0, "y": 0, "z": 0.7854 },
+          "arm_2": { "x": 0, "y": 0, "z": -0.7854 }
+        }
+      },
+      "interpolation": "easeInOut"
+    },
+    {
+      "id": "action_final_highlight",
+      "name": "Complete Octahedron",
+      "type": "rotate_highlight",
+      "targets": "all",
+      "duration": 3.0,
+      "rotationSpeed": 1.0
+    }
+  ],
+
+  "activities": [
+    {
+      "id": "octahedron_assembly",
+      "name": "Octahedron Assembly Lab",
+      "description": "Learn to construct a regular octahedron using connectors and straws - understanding 3D geometric principles through hands-on assembly",
+      "difficulty": "intermediate",
+      "estimatedTime": 1800,
+      "objectives": [
+        "Understand octahedron geometry and symmetry",
+        "Practice systematic 3D construction techniques",
+        "Learn connector port alignment and joint strength",
+        "Develop spatial reasoning through step-by-step assembly"
+      ],
+      "steps": [
+        {
+          "actionId": "action_prepare_connectors",
+          "title": "Prepare Base Connectors",
+          "description": "Identify and position the four 2-leg connectors that will form the base square of the octahedron",
+          "expectedResult": "4 two-leg connectors are visible and highlighted with golden color",
+          "hints": [
+            {
+              "level": 1,
+              "text": "Each connector has 2 arm ports for straw connections",
+              "visual": "Connectors are highlighted in gold color"
+            },
+            {
+              "level": 2,
+              "text": "Notice the spatial arrangement forming square corners",
+              "commonMistake": "Don't confuse port numbers - ports start from 0"
+            },
+            {
+              "level": 3,
+              "text": "Next step preview: You'll connect these 4 connectors with straws",
+              "tip": "Pay attention to the connector orientation - arms should point outward"
+            }
+          ],
+          "validation": {
+            "type": "structure",
+            "criteria": {
+              "requiredConnectors": ["connector_2leg_1", "connector_2leg_2", "connector_2leg_3", "connector_2leg_4"],
+              "visibility": true
+            },
+            "onValidationFail": {
+              "showHint": true,
+              "hintLevel": 2,
+              "allowRetry": true,
+              "autoCorrect": false,
+              "errorMessage": "Base connectors are not visible. Check if all 4 connectors are loaded."
+            }
+          }
+        },
+        {
+          "actionId": "action_adjust_base_connector_arms",
+          "title": "Adjust Base Connector Arms",
+          "description": "Fine-tune the arm angles of all base connectors for optimal alignment",
+          "expectedResult": "All base connector arms are positioned at the correct angles",
+          "hints": [
+            "Adjust arm_1 to +15 degrees for better alignment",
+            "Adjust arm_2 to -15 degrees to balance the structure",
+            "All 4 base connectors should have consistent arm angles"
+          ],
+          "validation": {
+            "type": "arm_transform",
+            "criteria": {}
+          }
+        },
+        {
+          "actionId": "action_build_base",
+          "title": "Form Base Square",
+          "description": "Connect the 4 connectors with straws to create the square foundation of the octahedron",
+          "expectedResult": "A complete square base is formed with proper connections",
+          "hints": [
+            {
+              "level": 1,
+              "text": "Each side of the square uses one green straw (11.2cm length)",
+              "visual": "Straws will slide in from their positions and snap into connectors"
+            },
+            {
+              "level": 2,
+              "text": "Straws connect via endpoints: start → port 0, end → port 2",
+              "commonMistake": "If connection fails, check that arms are at correct angles (±45°)"
+            },
+            {
+              "level": 3,
+              "text": "Next step preview: Second and third squares will appear instantly",
+              "tip": "Watch the sequential connection animation - connections form clockwise"
+            }
+          ],
+          "validation": {
+            "type": "connection",
+            "criteria": {
+              "requiredConnectionsGroup": "base_square",
+              "connected": true
+            },
+            "onValidationFail": {
+              "showHint": true,
+              "hintLevel": 2,
+              "allowRetry": true,
+              "autoCorrect": false,
+              "errorMessage": "Base square connections are incomplete. Verify all 4 straws are connected to their respective ports.",
+              "suggestedAction": "Check connection group 'base_square' - should have 8 connections (4 straws × 2 endpoints)"
+            }
+          }
+        },
+        {
+          "actionId": "action_adjust_additional_connector_arms",
+          "title": "Show Second & Third Squares with Adjusted Arms",
+          "description": "Display both second and third squares instantly with all connector arms pre-adjusted to optimal angles for the octahedron structure",
+          "expectedResult": "Both second and third squares appear with connector arms already positioned at ±45° angles",
+          "hints": [
+            "These squares appear instantly (no animation) to save time",
+            "All connector arms are automatically adjusted to ±0.7854 radians (±45°)",
+            "The second square uses connectors 5-8, third square uses connectors 9-12",
+            "Arms alternate between outward (+45°) and inward (-45°) for optimal geometry"
+          ],
+          "validation": {
+            "type": "arm_transform",
+            "criteria": {
+              "connectorValidations": [
+                {
+                  "connectorId": "connector_2leg_5",
+                  "armValidations": [
+                    {
+                      "armId": "arm_1",
+                      "expectedRotation": { "x": 0, "y": 0, "z": -0.7854 },
+                      "tolerance": 0.1
+                    },
+                    {
+                      "armId": "arm_2",
+                      "expectedRotation": { "x": 0, "y": 0, "z": 0.7854 },
+                      "tolerance": 0.1
+                    }
+                  ]
+                },
+                {
+                  "connectorId": "connector_2leg_6",
+                  "armValidations": [
+                    {
+                      "armId": "arm_1",
+                      "expectedRotation": { "x": 0, "y": 0, "z": -0.7854 },
+                      "tolerance": 0.1
+                    },
+                    {
+                      "armId": "arm_2",
+                      "expectedRotation": { "x": 0, "y": 0, "z": 0.7854 },
+                      "tolerance": 0.1
+                    }
+                  ]
+                }
+              ]
+            },
+            "onValidationFail": {
+              "showHint": true,
+              "hintLevel": 3,
+              "allowRetry": true,
+              "autoCorrect": true,
+              "errorMessage": "Connector arms are not at the expected angles (±45°).",
+              "suggestedAction": "Auto-correct will adjust all connector arms to optimal angles. Click 'Retry' to apply.",
+              "autoCorrectAction": "Apply connectorArmTransforms from action definition"
+            }
+          }
+        },
+        {
+          "actionId": "action_rotate_base_square",
+          "title": "Rotate Base Square 45°",
+          "description": "Rotate the base square component by 45° around its center to match the diagonal orientation.",
+          "expectedResult": "Base square straws and connectors align at the target diagonal positions.",
+          "hints": [
+            {
+              "level": 1,
+              "text": "The entire base square rotates as one unit (transformAsUnit: true)",
+              "visual": "Watch all 4 straws and 4 connectors rotate together smoothly"
+            },
+            {
+              "level": 2,
+              "text": "Rotation axis: Y-axis (vertical), angle: 45° (0.7854 radians)",
+              "commonMistake": "Component rotation is NOT additive - it's absolute matrix transformation"
+            },
+            {
+              "level": 3,
+              "text": "Next step: Second square will be positioned above this rotated base",
+              "tip": "The rotation prepares alignment for the diamond assembly"
+            }
+          ],
+          "validation": {
+            "type": "assembly_state",
+            "criteria": {
+              "assemblyId": "diamond_assembly",
+              "expectedState": "separate",
+              "componentMatrices": {
+                "square_base": {
+                  "rotation": { "x": 0, "y": 0.7854, "z": 0 },
+                  "tolerance": 0.05
+                }
+              }
+            },
+            "onValidationFail": {
+              "showHint": true,
+              "hintLevel": 2,
+              "allowRetry": true,
+              "autoCorrect": false,
+              "errorMessage": "Base square rotation is incorrect. Expected Y-rotation: 45° (0.7854 rad).",
+              "suggestedAction": "Replay this step to see the correct rotation animation"
+            }
+          }
+        },
+        {
+          "actionId": "action_position_square_second",
+          "title": "Position Second Square over Base",
+          "description": "Move the second square component above the base square (no rotation yet)",
+          "expectedResult": "Second square is translated into position above the base square without rotation",
+          "hints": [
+            "The second square moves as a whole component",
+            "No rotation is applied in this step",
+            "This prepares for the diamond assembly"
+          ],
+          "validation": {
+            "type": "assembly_state",
+            "criteria": {
+              "assemblyId": "diamond_assembly",
+              "expectedState": "separate",
+              "componentMatrices": {
+                "square_second": {
+                  "rotation": { "x": 0, "y": 0, "z": 0 },
+                  "position": { "x": -12, "y": 8, "z": 0 },
+                  "tolerance": 0.2
+                }
+              }
+            }
+          }
+        },
+        {
+          "actionId": "action_position_square_third",
+          "title": "Position Third Square",
+          "description": "Animate the third square component into its front/top position",
+          "expectedResult": "Third square is positioned with correct tilt and orientation",
+          "hints": [
+            "The third square moves as a whole component",
+            "Rotation around Z (90°) and tilt around X (45°)",
+            "Transforms apply around component center"
+          ],
+          "validation": {
+            "type": "assembly_state",
+            "criteria": {
+              "assemblyId": "octahedron_assembly",
+              "expectedState": "separate",
+              "componentMatrices": {
+                "square_third": {
+                  "rotation": { "x": 0.785, "y": 0, "z": 1.5708 },
+                  "position": { "x": -40, "y": 0, "z": 0 },
+                  "tolerance": 0.2
+                }
+              }
+            }
+          }
+        },
+        {
+          "actionId": "action_assemble_diamond",
+          "title": "Assemble Diamond",
+          "description": "Combine the base and second square components into a diamond assembly while maintaining component integrity",
+          "expectedResult": "Diamond assembly is formed with components properly positioned and rotated as units",
+          "hints": [
+            "Components are assembled as complete units, not individual elements",
+            "The second square component rotates 45° as a whole around its center",
+            "Component matrix transformation ensures all elements move together",
+            "Assembly maintains the structural integrity of each component"
+          ],
+          "validation": {
+            "type": "assembly_state",
+            "criteria": {
+              "assemblyId": "diamond_assembly",
+              "expectedState": "assembled",
+              "componentMatrices": {
+                "square_second": {
+                  "rotation": { "x": -0.7854, "y": 0, "z": 0 },
+                  "tolerance": 0.1
+                }
+              }
+            }
+          }
+        }
+      ],
+      "playbackControls": {
+        "allowRewind": true,
+        "allowPause": true,
+        "allowSkip": false,
+        "speed": 1.0
+      }
+    }
+  ],
+
+  "scene": {
+    "environment": {
+      "background": "#f5f5f5",
+      "lighting": {
+        "ambient": "#404040",
+        "directional": {
+          "color": "#FFFFFF",
+          "intensity": 1.2,
+          "position": { "x": 10, "y": 15, "z": 8 }
+        }
+      },
+      "camera": {
+        "position": { "x": 40, "y": 20, "z": 40 },
+        "target": { "x": 27.5, "y": 0, "z": 8 },
+        "fov": 60
+      }
+    },
+    "lod": {
+      "enabled": true,
+      "distances": [50, 100, 200],
+      "autoAdjust": true
+    },
+    "streaming": {
+      "enabled": true,
+      "chunkSize": "1MB",
+      "preloadRadius": 50
+    },
+    "performance": {
+      "targetFPS": 60,
+      "maxDrawCalls": 100,
+      "enableOcclusion": true
+    }
+  }
+}

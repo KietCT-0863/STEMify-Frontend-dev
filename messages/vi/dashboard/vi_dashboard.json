@@ -1,0 +1,164 @@
+{
+  "dashboard": {
+    "classroom": {
+      "submission": "Bài nộp",
+      "passRate": "Tỷ lệ hoàn thành",
+      "passed": "Đạt",
+      "failed": "Không đạt",
+      "score": "Điểm trung bình",
+      "overview": {
+        "title": "Tổng quan lớp học",
+        "subTitle": "Theo dõi tiến trình học tập và hiệu suất làm bài",
+        "quizStat": "Thống kê Quiz",
+        "performance": "Tổng quan về hiệu suất",
+        "tooltip": "Xác định học viên có tiến độ học tập chậm nhất bằng AI.",
+        "asmStat": "Thống kê Bài tập",
+        "legendSummary": {
+          "quizPass": "Quiz đạt",
+          "asmPass": "Bài tập đạt",
+          "notPass": "Chưa đạt"
+        },
+        "histogram": {
+          "title": "Histogram Khóa học",
+          "studentCount": "Số lượng học sinh đạt",
+          "scoreDistribution": "Phân phối điểm số học sinh",
+          "number": "Số lượng học sinh",
+          "scoreRange": "Khoảng điểm"
+        },
+        "ungraded": {
+          "title": "Bài tập chưa chấm",
+          "pending": "đang chờ",
+          "noAsm": "Không có bài tập nào đang chờ chấm.",
+          "id": "Mã",
+          "asmTitle": "Tiêu đề bài tập",
+          "learner": "Học viên",
+          "action": "Thao tác"
+        },
+        "progress": {
+          "title": "Tiến độ học viên",
+          "lesson": "Bài học trong",
+          "sort": "Sắp xếp theo:",
+          "noLesson": "Không tìm thấy bài học cho khóa học này.",
+          "disName": "Tên hiển thị",
+          "firstName": "Tên",
+          "lastName": "Họ"
+        }
+      },
+      "course": {
+        "title": "Khóa học",
+        "lessons": "bài học",
+        "schedule": "Lịch lớp học",
+        "duration": "Thời lượng/tuần:",
+        "min": "phút",
+        "week": "Tuần",
+        "totalWeek": "Tổng số tuần"
+      },
+      "quiz": {
+        "overviewTab": "Tổng quan",
+        "activeTab": "Đang hoạt động",
+        "overview": {
+          "enroll": "học sinh tham gia",
+          "accuracy": "Điểm trung bình",
+          "completeRate": "Tỷ lệ hoàn thành",
+          "question": "Câu hỏi"
+        },
+        "active": {
+          "name": "Tên Quiz",
+          "learner": "Học viên",
+          "accuracy": "Điểm trung bình",
+          "date": "Hạn nộp",
+          "action": "Thao tác"
+        }
+      },
+      "assignment": {
+        "learner": "Học viên",
+        "name": "Tên bài tập",
+        "action": "Thao tác",
+        "question": "Câu hỏi"
+      }
+    },
+    "organization": {
+      "heroSec": {
+        "hi": "Xin chào",
+        "title": "Hôm nay bạn muốn theo dõi điều gì trong tổ chức của mình?",
+        "subTitle": "Hiểu rõ tổ chức, theo dõi tiến độ và quản lý tổ chức hiệu quả."
+      },
+      "passed": "Đạt",
+      "failed": "Không đạt",
+      "score": "Điểm trung bình",
+      "passRate": "Tỷ lệ hoàn thành",
+      "totalCurriculum": "Số Chương trình học",
+      "totalClass": "Số lớp học",
+      "cert": "Chứng chỉ đã nhận",
+      "sup": "Hỗ trợ cộng đồng",
+      "user": "Tổng số người dùng",
+      "teacher": "Tổng số giáo viên",
+      "student": "Tổng số học viên",
+      "people": "Mọi người",
+      "enrollment": "Thay đổi ghi danh",
+      "feedback": "Phản hồi",
+      "feedbackDetail": "học viên đề xuất tăng cường giao tiếp và phản hồi thường xuyên từ ban quản lý",
+      "detail": "Xem chi tiết",
+      "change": "Thay đổi",
+      "curriculumStat": {
+        "title": "Thống kê Chương trình học"
+      },
+      "classroomStat": {
+        "title": "Thống kê Lớp học",
+        "code": "Mã chương trình",
+        "currTitle": "Tên chương trình",
+        "name": "Tên"
+      }
+    },
+    "admin": {
+      "title": "Bảng điều khiển hệ thống",
+      "subtitle": "Tổng quan hiệu suất hệ thống và doanh thu",
+      "period": {
+        "placeholder": "Chọn kỳ",
+        "month": "Tháng này",
+        "quarter": "Quý này",
+        "year": "Năm này"
+      },
+      "stats": {
+        "revenue": "Tổng doanh thu",
+        "compare": "So với kỳ trước",
+        "activeOrg": "Tổ chức hoạt động",
+        "growth": "Tăng trưởng",
+        "totalStudent": "Tổng học sinh",
+        "enrollment": "Lượt ghi danh",
+        "completionRate": "Tỷ lệ hoàn thành"
+      },
+      "charts": {
+        "revenueByPlan": "Doanh thu theo Gói",
+        "revenueDesc": "Phân bổ doanh thu dựa trên các gói đăng ký",
+        "planDetail": "Chi tiết gói đăng ký",
+        "planDetailDesc": "Trạng thái các gói đăng ký hiện tại",
+        "totalPlan": "Tổng gói",
+        "active": "Đang hoạt động",
+        "expired": "Đã hết hạn",
+        "noData": "Chưa có dữ liệu doanh thu"
+      },
+      "tables": {
+        "topOrg": "Top Tổ Chức",
+        "topOrgDesc": "Các tổ chức có lượng học viên lớn nhất",
+        "topCourse": "Top Khóa Học",
+        "topCourseDesc": "Các khóa học phổ biến nhất hệ thống",
+        "headers": {
+           "orgName": "Tên Tổ Chức",
+           "students": "Học sinh",
+           "enrollments": "Ghi danh",
+           "passRate": "Tỷ lệ đạt",
+           "activeSub": "Gói hoạt động",
+           "courseName": "Khóa học",
+           "classrooms": "Lớp học",
+           "avgScore": "Điểm TB",
+           "completion": "Hoàn thành"
+        },
+        "placeholders": {
+            "org": "Chưa có dữ liệu tổ chức",
+            "course": "Chưa có dữ liệu khóa học"
+        }
+      }
+    }
+  }
+}

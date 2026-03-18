@@ -1,0 +1,35 @@
+{
+  "content": {
+    "list": {},
+    "detail": {
+      "title": "Nội dung",
+      "noData": "Không tìm thấy nội dung.",
+      "noDataDetail": "Bạn chưa tạo nội dung nào."
+    },
+    "form": {
+      "title": {
+        "create": "Tạo nội dung bài học",
+        "update": "Cập nhật nội dung",
+        "createQuiz": "Tạo Quiz",
+        "createAssignment": "Tạo Bài Thực Hành"
+      }
+    },
+    "guide": "Hướng dẫn",
+    "upload": "Tải lên",
+    "templates": "Mẫu",
+    "image": "Hình ảnh",
+    "video": "Video",
+    "document": "Tài liệu",
+    "insertBlock": "Chèn khối",
+    "buttonLink": "Nút liên kết",
+    "step": "Bước",
+    "quiz": "Quiz",
+    "note": "Ghi chú",
+    "format": "Định dạng",
+    "size": "Kích thước",
+    "resolution": "Độ phân giải",
+    "createAt": "Ngày tạo",
+    "tag": "Thẻ",
+    "noTag": "Không có thẻ"
+  }
+}

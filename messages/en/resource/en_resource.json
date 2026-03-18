@@ -1,0 +1,46 @@
+{
+  "Resource": {
+    "title": "Library",
+    "description": "Curated courses, curriculum-aligned lessons, engaging activities, and support materials made by expert teachers.",
+    "courses": {
+      "title": "Courses",
+      "description": "Comprehensive courses designed to enhance STEM learning and accelerate your career growth."
+    },
+    "lessons": {
+      "title": "Lessons",
+      "description": "Engaging lessons aligned with curriculum standards to foster critical thinking and problem-solving skills."
+    },
+    "activities": {
+      "title": "Activities",
+      "description": "Interactive activities designed to make learning fun and engaging, enhancing student participation and understanding."
+    },
+    "curriculum": {
+      "title": "Curriculums",
+      "description": "Integrated curriculum for today’s STEM educators and tomorrow’s STEM leaders"
+    },
+    "stemKit": {
+      "title": "STEM Kit",
+      "description": "Explore our STEM Kit products designed to enhance hands-on learning experiences."
+    },
+    "strawAssemblyLibrary": {
+      "title": "Straw Assembly Library",
+      "description": "Access a collection of 3D models to enhance your STEM learning and projects."
+    },
+    "workspace3D": {
+      "title": "3D Workspace",
+      "description": "Create and manipulate 3D models for your STEM projects in our 3D workspace."
+    },
+    "microbitWorkspace": {
+      "title": "Micro:bit Workspace",
+      "description": "Utilize our Micro:bit workspace for coding and STEM activities."
+    },
+    "modalMaker": {
+      "title": "Modal Maker",
+      "description": "Create and customize modals for your STEM projects with ease."
+    },
+    "robotAi": {
+      "title": "Robot AI",
+      "description": "Explore our Robot AI resources to enhance your understanding of robotics and artificial intelligence."
+    }
+  }
+}

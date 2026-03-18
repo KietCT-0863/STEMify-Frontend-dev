@@ -1,0 +1,75 @@
+{
+  "id": "1leg",
+  "name": "Đầu nối 1 chân",
+  "version": "1.0",
+  "category": "connector",
+  "baseGeometry": {
+    "size": { "x": 2.0, "y": 2.0, "z": 2.0 },
+    "portDiameter": 0.65,
+    "shape": "custom",
+    "modelPath": "/models/connector_1leg.glb",
+    "meshName": "connector_1leg"
+  },
+  "materialRef": "plastic_red",
+  "arms": [
+    {
+      "id": "arm_1",
+      "meshName": "Arm_1",
+      "defaultRotation": { "x": 0, "y": 0, "z": 0 },
+      "portIndex": 0,
+      "port": {
+        "localPosition": { "x": 2.0, "y": 0, "z": 0 },
+        "orientation": { "x": 0, "y": 0, "z": 0 },
+        "socketType": "standard",
+        "allowedRotation": { "x": 0, "y": 0, "z": 360 }
+      }
+    }
+  ],
+  "physics": {
+    "mass": 0.8,
+    "centerOfMass": { "x": 0.5, "y": 0.5, "z": 0.5 },
+    "momentOfInertia": { "x": 0.3, "y": 0.3, "z": 0.3 }
+  },
+  "constraints": {
+    "maxConnections": 1,
+    "allowedAngles": [0, 90, 180, 270],
+    "minStrawLength": 5.0,
+    "maxStrawLength": 20.0
+  },
+  "lod": {
+    "high": {
+      "geometryComplexity": "detailed",
+      "polyCount": 1024,
+      "textureResolution": 1024,
+      "renderDistance": 50,
+      "enableAnimations": true
+    },
+    "medium": {
+      "geometryComplexity": "standard",
+      "polyCount": 256,
+      "textureResolution": 512,
+      "renderDistance": 100,
+      "enableAnimations": false
+    },
+    "low": {
+      "geometryComplexity": "basic",
+      "polyCount": 64,
+      "textureResolution": 256,
+      "renderDistance": 200,
+      "enableAnimations": false
+    }
+  },
+  "streaming": {
+    "priority": 2,
+    "chunkSize": "medium",
+    "compressionLevel": 4,
+    "preloadDistance": 20
+  },
+  "validation": {
+    "structuralIntegrity": 90,
+    "maxStress": 80,
+    "compatibleStraws": ["green_16_2", "yellow_3_8"],
+    "testingRequired": false
+  },
+  "imagePreviewUrl": "/images/components/connector_1_leg.png"
+}

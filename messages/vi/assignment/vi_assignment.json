@@ -1,0 +1,129 @@
+{
+  "assignment": {
+    "teacher": {
+      "title": "Bài tập",
+      "question": "Câu hỏi",
+      "score": "Điểm trung bình",
+      "passRate": "Tỷ lệ đạt",
+      "submission": "Bài nộp",
+      "table": {
+        "name": "Tên học sinh",
+        "status": "Trạng thái",
+        "grade": "Điểm",
+        "date": "Ngày nộp",
+        "noSubmission": "Không tìm thấy bài nộp.",
+        "subStatus": {
+          "notSubmitted": "Chưa nộp",
+          "submitted": "Đã nộp",
+          "pending": "Đang chờ",
+          "underReview": "Đang xem xét",
+          "passed": "Đạt",
+          "failed": "Không đạt",
+          "graded": "Đã chấm điểm"
+        }
+      },
+      "modal": {
+        "student": "Học sinh",
+        "submit": "Đã nộp",
+        "question": "Câu hỏi",
+        "status": "Trạng thái",
+        "answer": "Câu trả lời",
+        "noAnswer": "Không có câu trả lời dạng văn bản.",
+        "submitFile": "Tệp đã nộp",
+        "viewFile": "Xem tệp đã nộp",
+        "rubric": "Tiêu chí",
+        "point": "Điểm",
+        "max": "Điểm tối đa",
+        "total": "Tổng điểm cho câu hỏi",
+        "comment": "Nhận xét",
+        "commentSubTitle": "Các nhận xét dành cho học viên chỉ được hiển thị với học viên đó và người đã để lại nhận xét.",
+        "commentPlaceholder": "Chia sẻ suy nghĩ của bạn...",
+        "subStatus": {
+          "notSubmitted": "Chưa nộp",
+          "submitted": "Đã nộp",
+          "pending": "Đang chờ",
+          "underReview": "Đang xem xét",
+          "passed": "Đạt",
+          "failed": "Không đạt",
+          "graded": "Đã chấm điểm"
+        }
+      }
+    },
+    "student": {
+      "noAsm": "Không tìm thấy bài tập nào. Thử lại sau.",
+      "firstAttempt": {
+        "totalMark": "Tổng điểm",
+        "passingMark": "Điểm đạt",
+        "time": "Giới hạn thời gian",
+        "day": "ngày",
+        "quesLength": "Số lượng câu hỏi"
+      },
+      "alreadyAttempted": {
+        "due": "Hạn",
+        "submitted": "Đã nộp",
+        "attempt": "Lượt làm",
+        "left": "còn",
+        "allow": "lượt cho phép",
+        "pending": "Đang chờ đánh giá",
+        "nextAttempt": "Lượt làm tiếp theo có vào lúc",
+        "description": "Bài nộp của bạn từ {date} hiện đang được xem xét.",
+        "title": "Phản hồi của giáo viên"
+      },
+      "graded": {
+        "title": "Điểm của bạn",
+        "description": "Để đạt, bạn cần ít nhất {passingScore}%. Chúng tôi giữ lại điểm cao nhất của bạn."
+      },
+      "doAsm": {
+        "deadline": "Hạn nộp",
+        "deadline2": "Hạn nộp (Tính từ ngày đăng ký)",
+        "AIGrading": "Chấm điểm bằng AI",
+        "description": "Sau khi bạn nộp bài và hoàn thành phần đánh giá chéo bắt buộc, bạn sẽ nhận được điểm do AI chấm dựa trên rubric của bài tập. Sau đó, bạn có thể chọn để bài tập được đánh giá bởi các bạn học khác.",
+        "subDes": "Dữ liệu của bạn sẽ được sử dụng theo",
+        "subDesLink": "Thông báo Quyền riêng tư của chúng tôi",
+        "mySub": "Bài nộp của tôi",
+        "projectTitle": "Tiêu đề dự án",
+        "placeholder": "Nhập câu trả lời của bạn...",
+        "saveDraft": "Đã lưu bản nháp lúc {time}."
+      }
+    },
+    "upsert": {
+      "create": "Tạo bài thực hành",
+      "createDescription": "Tạo bài thực hành mới bằng cách điền các thông tin dưới đây.",
+      "update": "Cập nhật bài thực hành",
+      "updateDescription": "Cập nhật thông tin bài thực hành bằng cách chỉnh sửa các trường dưới đây.",
+      "title": "Tiêu đề bài thực hành",
+      "titlePlaceholder": "Nhập tiêu đề bài thực hành",
+      "passingScore": "Điểm đạt",
+      "durationDays": "Hạn nộp (tính từ ngày đăng ký)",
+      "cooldownHours": "Giờ chờ",
+      "summary": "Tóm tắt",
+      "totalPoints": "Tổng điểm",
+      "duration": "Thời lượng",
+      "days": "ngày",
+      "question": {
+        "question": "Câu hỏi",
+        "questionType": "Loại câu hỏi",
+        "text": "Văn bản",
+        "content": "Nội dung câu hỏi",
+        "contentPlaceholder": "Nhập nội dung câu hỏi",
+        "questionOrder": "Thứ tự câu hỏi",
+        "questionOrderSubtitle": "Kéo để sắp xếp lại câu hỏi",
+        "emptyQuestion": "Câu hỏi trống",
+        "point": "Điểm",
+        "rubric": {
+          "rubric": "Tiêu chí đánh giá",
+          "noData": "Chưa có tiêu chí nào được thêm. Nhấn \"Thêm tiêu chí\" để bắt đầu.",
+          "criterionName": "Tiêu chí",
+          "maxPoints": "Điểm tối đa"
+        }
+      }
+    },
+    "import": {
+      "title": "Nhập bài thực hành từ CSV",
+      "onSubmit": "Nhập bài thực hành",
+      "headerTitle": "Nhập bài thực hành từ tệp CSV",
+      "headerDescription": "Tải lên tệp CSV được định dạng đúng để nhập câu hỏi và chi tiết bài thực hành một cách nhanh chóng.",
+      "templateFileName": "assignment_template.csv"
+    }
+  }
+}

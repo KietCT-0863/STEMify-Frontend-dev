@@ -1,0 +1,128 @@
+{
+  "validation": {
+    "required": "This field is required",
+    "user": {
+      "name": "Name must start with a capital letter",
+      "nameLength": "Name must be at least {length} characters long",
+      "surname": "Surname must start with a capital letter",
+      "surnameLength": "Surname must be at least {length} characters long",
+      "email": "Invalid email address",
+      "userName": "Username must be at least {length} characters",
+      "password": "Password must be at least {length} characters",
+      "passwordRequired": "Password field cannot be left blank",
+      "firstName": "First name is required",
+      "lastName": "Last name is required"
+    },
+    "content": {
+      "length": "Content must have at least 50 characters of actual text (excluding Markdown and whitespace)",
+      "sectionId": "Section ID must be a positive number"
+    },
+    "ageRange": {
+      "min": "Min age must be at least 6",
+      "max": "Max age must be at least 6",
+      "maxMin": "Max age must be greater than Min age"
+    },
+    "category": {
+      "name": "Category name is required!"
+    },
+    "skill": {
+      "length": "Skill name must be at least {length} characters long"
+    },
+    "course": {
+      "code": "At least {length} characters long",
+      "title": "At least {length} characters long",
+      "studentTasks": "At least {length} characters long",
+      "description": "At least {length} characters long",
+      "ageRangeId": "Age range suitable for the course (required)",
+      "image": "Cover Image is required",
+      "imgSize": "Max {size}MB allowed",
+      "priceMin": "Price must be at least {min} VND"
+    },
+    "curriculum": {
+      "code": "Course code, at least {length} characters long, used to identify the course",
+      "title": "Course title, at least {length} characters long",
+      "description": "Detailed description of the course, at least {length} characters long",
+      "imageSize": "Max {size}MB allowed",
+      "imageUrl": "Cover image is required"
+    },
+    "learningOutcome": {
+      "minLength": "This field must be at least {min} characters long.",
+      "maxLength": "This field must be at most {max} characters long."
+    },
+    "lesson": {
+      "title": "Title must be at least {length} characters long",
+      "description": "Description must be at least {length} characters long",
+      "courseId": "Course ID must be a positive number",
+      "learningOutcome": "Learning outcome must be at least {length} characters long",
+      "imageSize": "Max {size}MB allowed",
+      "imageUrl": "Cover image is required"
+    },
+    "section": {
+      "title": "Title is required",
+      "description": "Description is required",
+      "duration": "Duration must be a non-negative number",
+      "lessonId": "Lesson ID must be a positive number"
+    },
+    "component": {
+      "name": "Component name is required",
+      "type": "Component type is required",
+      "imageSize": "Max {size}MB allowed",
+      "imageUrl": "Component image is required",
+      "image": "Invalid image file"
+    },
+    "organization": {
+      "name": "Organization name is required",
+      "description": "Description must be at least 10 characters",
+      "type": "Organization type is required",
+      "imageSize": "Max {size}MB allowed",
+      "imageUrl": "Organization image is required"
+    },
+    "plan": {
+      "name": "Plan name is required",
+      "description": "Description must be at least {min} characters long",
+      "price": "Price must be a non-negative number",
+      "billingCycle": "Billing cycle is required",
+      "accessSupportDetail": "Access support detail must be at least {min} characters long",
+      "curriculumCount": "Curriculum count must be at least {min}",
+      "maxTeacherSeats": "Maximum teacher seats must be at least {min}",
+      "maxStudentSeats": "Maximum student seats must be at least {min}",
+      "curriculumIds": "Select at least one curriculum",
+      "curriculumCountExceed": "Curriculum count ({curriculumCount}) cannot exceed the number of available curriculums selected ({selectedCurriculums})"
+    },
+    "subscription": {
+      "plan": "Select a plan",
+      "startDate": "Start date is required",
+      "seats": "Seats must be at least 10",
+      "pricePlan": "Price plan is required",
+      "expiredDate": "Expired date must be a valid future date",
+      "curriculumIds": "Select at least one curriculum",
+      "allowCurriculumExceed": "You can only select up to {curriculumCount} curriculum(s)"
+    },
+    "uploadCSV": {
+      "required": "Please upload a CSV"
+    },
+    "assignment": {
+      "title": "Title is required and must be at least {length} characters long",
+      "passingScore": "Passing score must be between 0 and 100",
+      "durationDays": "Duration (in days) must be a positive number",
+      "totalPoints": "Total points must be a positive number",
+      "question": {
+        "content": "Question content is required",
+        "point": "Point(s) must be a positive number",
+        "rubric": {
+          "criterionName": "Criterion name is required",
+          "maxPoints": "Max points must be a positive number"
+        }
+      }
+    },
+    "quiz": {
+      "title": "Title is required",
+      "description": "Description is required",
+      "passingMarks": "Passing marks must be between 0 and 100",
+      "durationDays": "Duration (in days) must be a positive number",
+      "totalMarks": "Total marks must be a positive number",
+      "timeLimitMinutes": "Time limit (in minutes) must be a positive number",
+      "cooldownHours": "Cooldown period (in hours) must be a positive number"
+    }
+  }
+}

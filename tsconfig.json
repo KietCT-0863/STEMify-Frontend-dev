@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "ignoreDeprecations": "5.0",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "src/",
+    "paths": {
+      "react/jsx-runtime.js": ["./node_modules/@types/react/jsx-runtime.d.ts"],
+      "react/jsx-runtime": ["./node_modules/@types/react/jsx-runtime.d.ts"],
+      "@/components/*": ["components/*"],
+      "@/ui/*": ["components/shadcn/*"],
+      "@/features/*": ["features/*"],
+      "@/utils/*": ["utils/*"],
+      "@/libs/*": ["libs/*"],
+      "@/types/*": ["types/*"],
+      "@/providers/*": ["providers/*"],
+      "@/shadcn/*": ["utils/shadcn/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/schemas/*": ["schemas/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/providers/ExcalidrawWrapper.tsx",
+    "src/components/shared/CustomMenubar",
+    "src/features/blockly-phaser/blockly/BlocklyEditor.js",
+    "src/app/[locale]/test/JointHelper.jsx",
+    "src/app/[locale]/test/Connector.jsx",
+    "src/app/[locale]/test/Straw.jsx",
+    "src/app/[locale]/test/page.jsx",
+    "src/app/[locale]/test-2/Connector.tsx",
+    "src/app/[locale]/test-2/Straw.tsx"
+  ],
+  "exclude": ["node_modules"]
+}

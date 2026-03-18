@@ -1,0 +1,324 @@
+{
+  "metadata": {
+    "title": "aaaaaaaaa",
+    "description": "aaaaaaaaa",
+    "author": "aaaaaaaaa",
+    "version": "2.0",
+    "created": "2025-10-06T04:29:05.662Z",
+    "lastModified": "2025-10-06T04:29:05.662Z"
+  },
+  "templates": {
+    "materials": [
+      {
+        "id": "plastic_green",
+        "source": "/components/templates/MaterialLibrary/plastic_green.json"
+      },
+      {
+        "id": "plastic_red",
+        "source": "/components/templates/MaterialLibrary/plastic_red.json"
+      },
+      {
+        "id": "plastic_blue",
+        "source": "/components/templates/MaterialLibrary/plastic_blue.json"
+      },
+      {
+        "id": "plastic_yellow",
+        "source": "/components/templates/MaterialLibrary/plastic_yellow.json"
+      },
+      {
+        "id": "plastic_orange",
+        "source": "/components/templates/MaterialLibrary/plastic_orange.json"
+      },
+      {
+        "id": "plastic_pink",
+        "source": "/components/templates/MaterialLibrary/plastic_pink.json"
+      }
+    ],
+    "components": [
+      {
+        "id": "green_11_2",
+        "source": "/components/templates/StrawTypes/green_11_2.json"
+      },
+      {
+        "id": "yellow_3_8",
+        "source": "/components/templates/StrawTypes/yellow_3_8.json"
+      },
+      {
+        "id": "3leg_red",
+        "source": "/components/templates/ConnectorTypes/3legs.json"
+      }
+    ]
+  },
+  "instances": {
+    "straws": [
+      {
+        "templateId": "yellow_3_8",
+        "instances": [
+          {
+            "id": "straw_1",
+            "transform": {
+              "position": {
+                "x": -12.891137120882824,
+                "y": 0,
+                "z": -8.454845382772763
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          {
+            "id": "straw_3",
+            "transform": {
+              "position": {
+                "x": -18.07469838346941,
+                "y": 0,
+                "z": 2.5494958654243405
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          }
+        ]
+      },
+      {
+        "templateId": "green_11_2",
+        "instances": [
+          {
+            "id": "straw_2",
+            "transform": {
+              "position": {
+                "x": -31.48348792632794,
+                "y": 0,
+                "z": -18.6831420023417
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          {
+            "id": "straw_4",
+            "transform": {
+              "position": {
+                "x": -12.644843561466445,
+                "y": 0,
+                "z": -4.267408741470003
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "connectors": [
+      {
+        "templateId": "3leg_red",
+        "instances": [
+          {
+            "id": "connector_1",
+            "transform": {
+              "position": {
+                "x": 2.951173382979963,
+                "y": 0,
+                "z": 8.755282647510196
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          {
+            "id": "connector_2",
+            "transform": {
+              "position": {
+                "x": 6.863737433407795,
+                "y": 2.8,
+                "z": 5.006510134688529
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          {
+            "id": "connector_3",
+            "transform": {
+              "position": {
+                "x": -0.881312563350054,
+                "y": 0,
+                "z": 14.187420074596123
+              },
+              "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "actions": [
+    {
+      "id": "action_1",
+      "name": "Highlight Action 1",
+      "type": "highlight",
+      "targets": ["straw_1", "straw_2", "straw_3", "straw_4"],
+      "duration": 2
+    },
+    {
+      "id": "action_2",
+      "name": "Transform Action 2",
+      "type": "transform_arm",
+      "targets": ["connector_1", "connector_2", "connector_3"],
+      "duration": 2,
+      "connectorArmTransforms": {
+        "connector_3": {
+          "arm_1": {
+            "x": 0,
+            "y": 0,
+            "z": 1.1344640137963142
+          },
+          "arm_2": {
+            "x": -1.117010721276371,
+            "y": -0.19198621771937624,
+            "z": 0.6806784082777885
+          },
+          "arm_3": {
+            "x": 0,
+            "y": 0.5934119456780721,
+            "z": 0
+          }
+        },
+        "connector_2": {
+          "arm_1": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "arm_2": {
+            "x": -0.767944870877505,
+            "y": 0,
+            "z": 0
+          },
+          "arm_3": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        },
+        "connector_1": {
+          "arm_1": {
+            "x": 0,
+            "y": 0,
+            "z": 0.6981317007977318
+          },
+          "arm_2": {
+            "x": 0,
+            "y": -0.7853981633974483,
+            "z": 0
+          },
+          "arm_3": {
+            "x": 0.7504915783575616,
+            "y": 0,
+            "z": 0
+          }
+        }
+      },
+      "interpolation": "easeInOut",
+      "instantAppear": true
+    }
+  ],
+  "activities": [
+    {
+      "id": "custom_assembly",
+      "name": "aaaaaaaaa",
+      "description": "aaaaaaaaa",
+      "difficulty": "beginner",
+      "estimatedTime": 600,
+      "steps": [
+        {
+          "actionId": "action_1",
+          "title": "Highlight: Highlight Action 1",
+          "description": "Highlights targets: straw_1, straw_2, straw_3, straw_4",
+          "expectedResult": "Targets are highlighted",
+          "hints": ["Notice the highlighted components"]
+        },
+        {
+          "actionId": "action_2",
+          "title": "Adjust Arms: Transform Action 2",
+          "description": "Connector arms should rotate as exported",
+          "expectedResult": "Arms are rotated according to saved values",
+          "hints": ["Check connector arms rotations"]
+        }
+      ]
+    }
+  ],
+  "scene": {
+    "environment": {
+      "background": "#f5f5f5",
+      "lighting": {
+        "ambient": "#404040",
+        "directional": {
+          "color": "#FFFFFF",
+          "intensity": 1.2,
+          "position": {
+            "x": 10,
+            "y": 15,
+            "z": 8
+          }
+        }
+      },
+      "camera": {
+        "position": {
+          "x": 30,
+          "y": 20,
+          "z": 30
+        },
+        "target": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "fov": 60,
+        "controls": "orbit"
+      }
+    },
+    "workspace": {
+      "bounds": {
+        "min": {
+          "x": -100,
+          "y": -100,
+          "z": -100
+        },
+        "max": {
+          "x": 100,
+          "y": 100,
+          "z": 100
+        }
+      },
+      "grid": {
+        "visible": true,
+        "size": 1,
+        "divisions": 100
+      }
+    }
+  }
+}

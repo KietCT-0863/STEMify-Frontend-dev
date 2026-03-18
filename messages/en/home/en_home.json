@@ -1,0 +1,84 @@
+{
+  "HeroSection": {
+    "subtitle": "Turn STEM into a game - Inspire passion, creativity",
+    "title": "The students' light bulbs are coming on",
+    "searchPlaceholder": "What would you like to explore today?",
+
+    "course": "Course",
+    "lesson": "Lesson",
+    "activity": "Activity"
+  },
+  "ExploreResourcesSection": {
+    "title": "Explore resources",
+    "description": "We provide standards-aligned STEM courses for Grades 3–8, focusing on engineering, creativity, and hands-on learning. Students engage in building models with straws and open-ended challenges. Our program helps students learn through exploration while developing problem-solving and engineering skills."
+  },
+  "ToolsSection": {
+    "title": "What is STEMify?",
+    "description": "STEMIFY Education’s solutions are ideal for classrooms, virtual learning environments, makerspaces, and other STEM programs. Our StemifyKits and easy-to-implement curriculum are designed to grow with students grades 3-12 and educators. Our solutions prepare all learners for success in STEM classrooms and careers."
+  },
+  "BenefitSection": {
+    "status": "A World of STEAM at Your Fingertips!",
+    "title": "Stemify Resources",
+    "benefit1": "Save Time",
+    "benefit2": "Aligned with Your Curriculum Standards",
+    "benefit3": "Hands-on Learning",
+    "benefit1Desc": "Less prep work for you, more fun for everyone.",
+    "benefit2Desc": "No more struggling to integrate STEAM and STEM into your lesson planning.",
+    "benefit3Desc": "Make STEAM and STEM subjects accessible and increase long-term retention."
+  },
+  "ThreeDSection": {
+    "badge": "🚀 STEM Innovation",
+    "title": "Craft Your Own",
+    "description": {
+      "part1": "Turn ideas into reality with our comprehensive STEM course. ",
+      "part2": "From the first components to the finished smart product, ",
+      "part3": "you will be the creator."
+    },
+    "project": "Project",
+    "support": "Support",
+    "creative": "Creative"
+  },
+  "StatsSection": {
+    "freeResources": "Free Resources",
+    "engagedStudents": "Engaged Students",
+    "positiveImpact": "Positive Impact on STEM"
+  },
+  "TestimonialsSection": {
+    "title": "What do students say about "
+  },
+  "FAQSection": {
+    "title": "Do you still have any questions?",
+    "description": "Book a meeting to learn about our offline materials. We will contact you for customer care.",
+    "emailPlaceholder": "Enter your email"
+  },
+  "footer": {
+    "infoForParents": {
+      "title": "Information for Parents",
+      "description": "STEMIFY Education is an online STEM learning platform for students in grades 3-8, offering courses and resources that help develop critical thinking, problem-solving, and creativity through hands-on learning."
+    },
+    "info": {
+      "title": "Information",
+      "aboutUs": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "press": "Press",
+      "contact": "Contact",
+      "home": "Home"
+    },
+    "education": {
+      "title": "Education",
+      "programs": "Programs",
+      "team": "Team",
+      "partners": "Partners",
+      "resources": "Resources"
+    },
+    "help": {
+      "title": "Help",
+      "support": "Support Center",
+      "faqs": "Frequently Asked Questions",
+      "termsOfService": "Terms of Service",
+      "privacyPolicy": "Privacy Policy",
+      "contactUs": "Contact Us"
+    }
+  }
+}

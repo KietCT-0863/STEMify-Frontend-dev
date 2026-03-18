@@ -1,0 +1,120 @@
+{
+  "classroom": {
+    "list": {
+      "header": "Danh sách lớp học",
+      "description": "Quản lý tất cả các lớp học hiện có của bạn, bao gồm chi tiết lớp học, lịch trình, giáo viên và học sinh đã đăng ký.",
+      "searchPlaceholder": "Tìm kiếm...",
+      "selectCoursePlaceholder": "Chọn chương trình học",
+      "selectStatusPlaceholder": "Lọc theo trạng thái",
+      "courses": "khóa học",
+      "noClassroom": "Không tìm thấy lớp học nào.",
+      "noClassroomSubtext": "Thử điều chỉnh tìm kiếm hoặc bộ lọc để tìm những gì bạn đang tìm kiếm."
+    },
+    "update": {
+      "basicInfo": {
+        "label": "Cập nhật thông tin cơ bản của lớp học",
+        "weeks": "tuần",
+        "custom": "tùy chỉnh",
+        "classCode": "Mã lớp học",
+        "className": "Tên lớp học",
+        "description": "Mô tả",
+        "descriptionPlaceholder": "Mô tả ngắn gọn về lớp học này...",
+        "gradeLevel": "Cấp lớp",
+        "duration": "Thời lượng",
+        "selectDuration": "Chọn thời lượng",
+        "startDate": "Ngày bắt đầu",
+        "endDate": "Ngày kết thúc"
+      },
+      "curriculum": "Cập nhật khóa học",
+      "teacher": "Cập nhật giáo viên của lớp học",
+      "students": {
+        "addStudents": "Thêm học sinh vào lớp học",
+        "studentEmail": "Email học sinh",
+        "searchStudent": "Tìm kiếm học sinh theo  email",
+        "studentEmailSubtext": "Tìm kiếm học sinh theo tên hoặc email",
+        "students": "học sinh",
+        "selected": "đã chọn",
+        "searchingStudents": "Đang tìm kiếm học sinh...",
+        "noStudentFound": "Không tìm thấy học sinh cho",
+        "noStudentFoundSubtext": "Thử tìm kiếm khác hoặc dán email trực tiếp"
+      }
+    },
+    "detail": {
+      "notFound": "Không tìm thấy lớp học.",
+      "notFoundSubtext": "Lớp học bạn đang tìm kiếm không tồn tại.",
+      "backToClassrooms": "Quay lại Lớp học",
+      "header": "Chi tiết lớp học",
+      "selected": "Đã chọn",
+      "grade": "Khối",
+      "students": {
+        "label": "Học sinh",
+        "noStudent": "Chưa có học sinh nào.",
+        "noStudentSubtext": "Bắt đầu xây dựng lớp học của bạn bằng cách thêm học sinh"
+      },
+      "course": "Khóa học",
+      "curriculum": {
+        "label": "Chương trình học"
+      },
+      "classCode": {
+        "label": "Mã lớp học",
+        "description": "Chia sẻ mã này với học sinh để tham gia lớp học",
+        "copySuccess": "Mã lớp học đã được sao chép vào clipboard!"
+      },
+      "teacher": "Giáo viên",
+      "meet": {
+        "label": "Cuộc Họp",
+        "joinButton": "Tham gia cuộc họp"
+      },
+      "quickStats": {
+        "label": "Thông tin",
+        "createdDate": "Ngày tạo",
+        "lastUpdated": "Cập nhật lần cuối",
+        "duration": "Thời lượng"
+      }
+    },
+    "create": {
+      "header": "Tạo lớp học mới",
+      "subheader": "Làm theo các bước dưới đây để thiết lập lớp học của bạn",
+      "basicInfo": "Thông tin cơ bản",
+      "duration": "Thời lượng",
+      "selectDuration": "Chọn thời lượng",
+      "startDate": "Ngày bắt đầu",
+      "endDate": "Ngày kết thúc",
+      "weeks": "Tuần",
+      "custom": "Tùy chỉnh",
+      "description": "Mô tả",
+      "descriptionPlaceholder": "Mô tả ngắn gọn về lớp học này...",
+      "groupList": "Danh sách nhóm",
+      "grade": "Khối",
+      "selectSubscription": "Chọn gói đăng ký",
+      "annual": "Hàng năm",
+      "semiAnnual": "Nửa năm",
+      "students": "Học sinh",
+      "teachers": "Giáo viên",
+      "curricula": "Chương trình học"
+    },
+    "studentClassroom": {
+      "list": {
+        "title": "Danh sách học sinh",
+        "description": "Quản lý các học sinh hiện có trong lớp học này.",
+        "number": "Sĩ số:",
+        "placeholder": "Chưa có học sinh nào trong lớp này."
+      },
+      "detail": {
+        "title": "Hồ sơ học tập",
+        "description": "Chi tiết tiến độ và kết quả học tập trong lớp.",
+        "quizScore": "Điểm Quiz trung bình",
+        "asmScore": "Điểm Bài Tập trung bình",
+        "quizTotal": "Tổng số bài kiểm tra",
+        "asmTotal": "Tổng số Bài Tập",
+        "submitted": "đã nộp"
+      }
+    },
+    "myLearning": {
+      "title": "Lớp học của tôi",
+      "noClassroom": "Bạn chưa tham gia lớp học nào.",
+      "noClassroomSubtext": "Khám phá các lớp học có sẵn và bắt đầu học ngay hôm nay!",
+      "grade": "Khối"
+    }
+  }
+}

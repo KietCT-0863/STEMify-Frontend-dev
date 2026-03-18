@@ -1,0 +1,99 @@
+{
+  "quiz": {
+    "teacher": {
+      "tab": {
+        "question": "Questions",
+        "overview": "Overview"
+      },
+      "header": {
+        "quiz": "Quiz",
+        "question": "Question(s)",
+        "passRate": "Pass Rate",
+        "submission": "Submission",
+        "time": "Time",
+        "mins": "min(s)"
+      },
+      "answerTable": {
+        "submitted": "Submitted at:",
+        "head": "Learner",
+        "point": "Point:",
+        "accuracy": "Accuracy",
+        "answered": "Answered",
+        "question": "Questions",
+        "correct": "Correct",
+        "incorrect": "Incorrect",
+        "skip": "Skip",
+        "correctAnswer": "Correct Answer"
+      },
+      "questionTab": {
+        "description": "This Tab Shows the accumulated data of all learner attempts.",
+        "statistic": "Statistic",
+        "resp": "resp"
+      }
+    },
+    "student": {},
+    "upsert": {
+      "create": "Create Quiz",
+      "update": "Update Quiz",
+      "settings": "Quiz Settings",
+      "form": {
+        "title": "Title",
+        "titlePlaceholder": "Enter Quiz Title",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter Quiz Description",
+        "timeLimitMinutes": "Time Limit (minutes)",
+        "durationDays": "Duration (days)",
+        "cooldownHours": "Cooldown (hours)",
+        "totalMarks": "Total Marks",
+        "passingMarks": "Passing Marks",
+        "updateQuizInfo": "Update Quiz Info",
+        "question": {
+          "question": "Question",
+          "saveQuestions": "Save Questions",
+          "multipleChoice": "Multiple Choice",
+          "trueFalse": "True / False",
+          "singleChoice": "Single Choice",
+          "enterQuestion": "Enter Question here",
+          "answer": "Answer",
+          "dragToReorder": "Drag to reorder options",
+          "addOption": "Add Option",
+          "explanation": "Explanation",
+          "optional": "Optional"
+        }
+      }
+    },
+    "import": {
+      "title": "Import Quiz",
+      "button": "Upload (CSV)",
+      "headerTitle": "Upload Quiz Questions from CSV File",
+      "headerDescription": "Upload a CSV file with the correct format to add multiple quiz questions at once."
+    },
+    "detail": {
+      "passingMarks": "Passing Marks",
+      "maxAttempt": "Max Attempt",
+      "timeLimit": "Time Limit",
+      "mins": "mins",
+      "length": "Length",
+      "noData": "No quiz data available",
+      "yourFinalScore": "Your final score",
+      "attemptHistory": "Attempt History",
+      "noAttempts": "No attempts made yet.",
+      "startedAt": "Started At",
+      "completedAt": "Completed At",
+      "correctAnswers": "Correct Answers",
+      "score": "Score",
+      "duration": "Duration",
+      "status": "Status",
+      "resultDetail": "Result Detail",
+      "complete": "Completed",
+      "incomplete": "Incomplete",
+      "question": {
+        "question": "Question",
+        "singlechoice": "Single Choice",
+        "multiplechoice": "Multiple Choice",
+        "truefalse": "True / False",
+        "pts": "pts"
+      }
+    }
+  }
+}

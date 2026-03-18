@@ -1,0 +1,108 @@
+{
+  "kits": {
+    "list": {
+      "title": "Kits List",
+      "description": "Manage and organize kits for your educational platform.",
+      "noData": "No kits available.",
+      "noDataDescription": "There are currently no kits. Please check back later.",
+      "searchPlaceholder": "Search kits here...",
+      "addToCart": "Add to Cart",
+      "bestSeller": "Best Seller",
+      "Filters": "Filters",
+      "clear": "Clear All",
+      "priceRange": "Price Range",
+      "age": "Age",
+      "sort": "Sort",
+      "sortOptions": {
+        "newest": "Newest",
+        "priceLowToHigh": "Price: Low to High",
+        "priceHighToLow": "Price: High to Low",
+        "nameAToZ": "Name: A → Z",
+        "nameZToA": "Name: Z → A"
+      },
+      "status": "Status",
+      "statusOptions": {
+        "all": "All",
+        "preOrder": "Pre-order",
+        "available": "Available"
+      },
+      "ageOptions": {
+        "all": "All"
+      },
+      "search": "Search",
+      "sku": "SKU",
+      "availability": "Availability",
+      "available": "Available",
+      "outOfStock": "Out of Stock",
+      "items": "Items",
+      "reviews": "Reviews",
+      "singleCourseNote": "Only one kit can be associated with a course"
+    },
+    "detail": {
+      "title": "Kit Details",
+      "description": "View and edit details of the selected kit.",
+      "descriptionLabel": "Description",
+      "price": "Price",
+      "age": "Age",
+      "preOrder": "Pre-order",
+      "weight": "Weight",
+      "dimensions": "Dimensions",
+      "whatsIncluded": "What's Included",
+      "selectYourProduct": "Select Your Product",
+      "securePayment": "Secure Payment",
+      "warranty": "12-month Warranty",
+      "freeShipping": "Free Shipping",
+      "returnRefund": "30-day Return & Refund",
+      "shipTime": "Ship in 2 Business Days",
+      "primeDelivery": "Buy with Prime for a Faster Delivery",
+      "safeCheckout": "Safe & Secure Checkout",
+      "productQuestions": "Questions about products? Contact us for support.",
+      "headlineStem": "Make Your STEM Learning to the Next Level"
+    },
+    "form": {
+      "title": {
+        "create": "Create New Kit",
+        "edit": "Edit Kit"
+      },
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Enter kit name"
+        },
+        "description": {
+          "label": "Description",
+          "placeholder": "Enter kit description"
+        },
+        "imageUrl": {
+          "label": "Image URL (up to 5 images)"
+        },
+        "price": {
+          "label": "Price",
+          "placeholder": "Enter kit price"
+        },
+        "ageRange": {
+          "label": "Age"
+        },
+        "isPreorder": {
+          "label": "Pre-order"
+        },
+        "sku": {
+          "label": "SKU",
+          "placeholder": "e.g: ABC123"
+        },
+        "weight": {
+          "label": "Weight (grams)",
+          "placeholder": "e.g: 500"
+        },
+        "dimensions": {
+          "label": "Dimensions (cm)",
+          "placeholder": "e.g., 30 x 20 x 10 cm"
+        },
+        "stockQuantity": {
+          "label": "Stock Quantity",
+          "placeholder": "e.g: 100"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "organization": {
+    "name": "Tổ chức",
+    "type": "Loại tổ chức",
+    "description": "Mô tả",
+    "image": "Ảnh tổ chức",
+    "imageSize": "Ảnh phải nhỏ hơn 5MB",
+    "lesson": "Bài học",
+    "classroom": "Lớp học",
+    "detail": {
+      "noData": "Không có dữ liệu tổ chức nào.",
+      "noSubscription": "Không có gói đăng ký nào cho tổ chức này.",
+      "header": "Chi tiết tổ chức",
+      "status": "Trạng thái",
+      "description": "Mô tả",
+      "organizationType": "Loại tổ chức",
+      "createdDate": "Ngày tạo",
+      "lastModifiedDate": "Ngày cập nhật",
+      "createdAt": "Ngày tạo",
+      "updatedAt": "Ngày cập nhật",
+      "package": "Gói",
+      "contract": {
+        "noContract": "Không có hợp đồng nào.",
+        "header": "Thông tin hợp đồng",
+        "noContractFile": "Chưa tải lên tệp hợp đồng.",
+        "name": "Tên hợp đồng",
+        "description": "Mô tả hợp đồng",
+        "createdAt": "Ngày tạo",
+        "viewFile": "Xem tệp hợp đồng"
+      },
+      "subscription": {
+        "label": "Gói đăng ký",
+        "header": "Chi tiết gói đăng ký",
+        "studentSeats": "Học sinh",
+        "teacherSeats": "Giáo viên",
+        "totalSeats": "Tổng số lượng",
+        "billingCycle": "Chu kỳ gói",
+        "grossAmount": "Tổng số tiền",
+        "netAmount": "Thành tiền",
+        "discount": "Giảm giá",
+        "startDate": "Ngày bắt đầu",
+        "endDate": "Ngày kết thúc",
+        "includeCurriculum": "Chương trình giảng dạy",
+        "annual": "Hàng năm",
+        "semiAnnual": "Nửa năm",
+        "course": "Khóa học",
+        "currentPlan": {
+          "title": "Gói hiện tại",
+          "packageDetails": "Chi tiết gói",
+          "pendingActivation": "Gói đăng ký này sẽ được kích hoạt vào",
+          "expiredOn": "Hết hạn vào",
+          "annual": "Hàng năm",
+          "semiAnnual": "Nửa năm",
+          "monthRemaing": "tháng còn lại",
+          "of": "trên",
+          "subscriptionPeriod": "Thời gian gói đăng ký",
+          "assignedLicenses": "Suất sử dụng đã cấp",
+          "licenseRemaing": "suất sử dụng còn lại",
+          "totalStudent": "Tổng số học sinh",
+          "seatRemaining": "suất còn lại",
+          "totalTeacher": "Tổng số giáo viên",
+          "totalCurricula": "Tổng số khung chương trình",
+          "includingCurricula": "Bao gồm {curriculum} chương trình giảng dạy"
+        },
+        "curricula": {
+          "includedCurricula": "Chương trình giảng dạy bao gồm",
+          "description": "Khóa học và tài liệu học tập có trong gói đăng ký của bạn",
+          "age": "Độ tuổi",
+          "courses": "Khóa học"
+        }
+      },
+      "license": {
+        "label": "suất sử dụng",
+        "header": "Chi tiết suất sử dụng",
+        "totalLicenses": "Tổng số suất sử dụng",
+        "usedLicenses": "Đã sử dụng suất sử dụng",
+        "member": "Thành viên",
+        "active": "Đang hoạt động",
+        "pending": "Chưa xác nhận",
+        "noActive": "Không có tài khoản nào đang hoạt động.",
+        "name": "Tên",
+        "role": "Vai trò",
+        "status": "Trạng thái",
+        "assignedAt": "Ngày được cấp",
+        "notSet": "Chưa đặt",
+        "userManagement": {
+          "header": "Quản lý người dùng",
+          "description": "Quản lý người dùng và lời mời đang chờ",
+          "searchUser": "Tìm kiếm theo tên hoặc email",
+          "accountType": "Loại tài khoản",
+          "active": "Đang hoạt động",
+          "pending": "Chưa xác nhận"
+        }
+      },
+      "user": {
+        "title": "Thành viên tổ chức",
+        "noData": "Không tìm thấy thành viên nào cho tổ chức này."
+      }
+    },
+    "form": {
+      "title": {
+        "create": "Tạo tổ chức",
+        "update": "Cập nhật tổ chức"
+      },
+      "placeholder": {
+        "name": "Nhập tên Tổ chức",
+        "type": "Chọn loại tổ chức",
+        "description": "Nhập mô tả"
+      }
+    },
+    "subscription": {
+      "header": "Tạo gói đăng ký tổ chức",
+      "subHeader": "Làm theo các bước để thiết lập tổ chức của bạn",
+      "months": " tháng",
+      "step1": {
+        "title": "Cấu hình gói đăng ký",
+        "description": "Chọn gói và các tùy chọn"
+      },
+      "step2": {
+        "title": "Tạo tài khoản quản trị",
+        "description": "Cấp quyền truy cập cho quản trị viên"
+      },
+      "title": "Các gói đăng ký",
+      "noData": "Không tìm thấy gói đăng ký nào cho tổ chức này.",
+      "create": {
+        "header": "Cấu hình gói đăng ký",
+        "description": "Chọn chu kỳ thanh toán, chọn gói và cấu hình chi tiết gói đăng ký",
+        "contract": {
+          "header": "Thông tin hợp đồng",
+          "headerDescription": "Cung cấp chi tiết hợp đồng cho gói đăng ký này",
+          "name": {
+            "label": "Tên hợp đồng",
+            "placeholder": "Nhập tên hợp đồng"
+          },
+          "contractFile": {
+            "label": "Tệp hợp đồng (PDF)",
+            "placeholder": "Tải lên tệp hợp đồng",
+            "description": "Tải lên một tệp PDF nhỏ (dưới 5MB)"
+          },
+          "description": {
+            "label": "Mô tả hợp đồng",
+            "placeholder": "Nhập mô tả hợp đồng"
+          }
+        },
+        "plan": {
+          "billingCycle": {
+            "label": "Chu kỳ thanh toán",
+            "semiAnnual": "Nửa năm",
+            "semiAnnualDescription": "Chu kỳ thanh toán 6 tháng",
+            "annual": "Hàng năm",
+            "annualDescription": "Chu kỳ thanh toán 12 tháng"
+          },
+          "label": "Chọn gói",
+          "annual": "Năm",
+          "semiAnnual": "6 tháng",
+          "curriculum": "Chương trình giảng dạy",
+          "studentSeat": "Học sinh",
+          "teacherSeat": "Giáo viên"
+        },
+        "period": {
+          "header": "Thời gian đăng ký",
+          "startDate": "Ngày bắt đầu",
+          "endDate": "Ngày kết thúc",
+          "endDateDescription": "Tự động tính toán dựa trên ngày bắt đầu và chu kỳ thanh toán"
+        },
+        "curriculumSelection": {
+          "header": "Lựa chọn chương trình giảng dạy",
+          "selected": "Đã chọn ",
+          "selectedCurriculums": "Chương trình giảng dạy đã chọn",
+          "description": "Bạn có thể chọn tối đa {maxCurriculums} chương trình giảng dạy dựa trên gói đã chọn.",
+          "label": "Chương trình giảng dạy",
+          "placeholder": "Chọn chương trình giảng dạy...",
+          "searchCurriculum": "Tìm kiếm...",
+          "noData": "Không tìm thấy chương trình giảng dạy nào."
+        },
+        "planOverview": {
+          "header": "Tổng quan về gói",
+          "studentSeats": "Học sinh",
+          "teacherSeats": "Giáo viên",
+          "maximumCapacity": "Sức chứa tối đa",
+          "planDescription": "Mô tả gói",
+          "pricing": {
+            "header": "Chi tiết giá",
+            "discount": "Giảm giá",
+            "totalAmount": "Tổng tiền",
+            "finalAmount": "Thành tiền"
+          }
+        }
+      }
+    },
+    "license": {
+      "header": "Tạo tài cho tổ chức",
+      "description": "Tài khoản mới sẽ được tạo cho tổ chức này. Tài khoản sẽ tự động được cấp một giấy phép hợp lệ từ gói đăng ký này.",
+      "downloadCSVTemplate": "Tải mẫu CSV",
+      "uploadCSV": "Tải lên tệp CSV",
+      "dragAndDrop": "Kéo và thả tệp CSV của bạn vào đây",
+      "uploading": "Đang tải lên...",
+      "inviteUsers": "Mời người dùng",
+      "enterEmails": "Nhập email",
+      "pleaseUploadCSV": "Vui lòng tải lên tệp CSV",
+      "uploadSuccess": "Đã gửi lời mời thành công!",
+      "userType": "Loại người dùng"
+    },
+    "group": {
+      "title": "Nhóm học sinh của tổ chức",
+      "subTitle": "Quản lý các nhóm của tổ chức bạn",
+      "noData": "Không tìm thấy nhóm nào cho tổ chức này.",
+      "groupCode": "Mã nhóm:",
+      "groupName": "Tên nhóm:",
+      "numberOfStudents": "Số lượng: {quantity} học sinh",
+      "groupList": "Danh sách học sinh",
+      "createdDate": "Ngày tạo",
+      "updatedAt": "Ngày cập nhật",
+      "totalStudents": "Tổng số học sinh",
+      "attendance": "Tham gia",
+      "step1": {
+        "title": "Bước 1: Chọn học sinh cho nhóm",
+        "description": "Chọn học sinh để thêm vào nhóm",
+        "numberOfStudents": "Số lượng học sinh",
+        "gradeLevel": "Cấp lớp",
+        "gradeLevelPlaceholder": "Chọn cấp lớp",
+        "studentList": "Danh sách học sinh",
+        "selected": "Đã chọn"
+      },
+      "step2": {
+        "title": "Bước 2: Tạo nhóm",
+        "numberOfStudents": "Số học sinh",
+        "studentsPerGroup": "Số học sinh mỗi nhóm",
+        "gradeLevel": "Cấp lớp",
+        "groupList": "Danh sách nhóm",
+        "name": "Tên",
+        "studentCount": "Số học sinh"
+      }
+    },
+    "curriculum": {
+      "curriculum": "Khung chương trình",
+      "orgCurriculumDescription": "Tổ chức của bạn hiện đang được cấp quyền truy cập vào {count} khung chương trình thuộc gói đăng ký.\nMỗi khung chương trình cung cấp lộ trình học tập rõ ràng, danh mục khóa học và tài nguyên giảng dạy nhằm hỗ trợ việc triển khai giáo dục STEM ở nhiều cấp độ. Hãy khám phá các chương trình bên dưới để xem thông tin khóa học, thời gian học và chi tiết liên quan.",
+      "title": "Danh sách khung chương trình",
+      "noData": "Không tìm thấy chương trình giảng dạy nào cho tổ chức này.",
+      "noResultsForFilter": "Không tìm thấy kết quả nào cho bộ lọc đã chọn.",
+      "courseCount": "{count} khóa học",
+      "startDate": "Ngày kích hoạt",
+      "endDate": "Ngày hết hạn",
+      "courses": "Khóa học",
+      "filterByStatus": "Lọc theo trạng thái",
+      "showing": "Hiển thị",
+      "results": "kết quả",
+      "all": "Tất cả",
+      "activeSubscriptions": "Gói đang hoạt động",
+      "expiredSubscriptions": "Gói đã hết hạn",
+      "upcomingSubscriptions": "Gói sắp kích hoạt",
+      "cancelledSubscriptions": "Gói đã hủy",
+      "accessPeriod": "Thời hạn truy cập"
+    },
+    "userTable": {
+      "title": "Quản lý người dùng trong Tổ chức",
+      "description": "Duyệt và quản lý tất cả các thành viên tổ chức đã đăng ký trên nền tảng.",
+      "student": "Học sinh",
+      "teacher": "Giáo viên",
+      "admin": "Quản trị viên",
+      "placeholder": {
+        "email": "Tìm kiếm theo email...",
+        "license": "Chọn vai trò"
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "classroom": {
+    "list": {
+      "header": "Classroom List",
+      "description": "Manage all your existing classrooms, including class details, schedules, teachers, and enrolled students.",
+      "searchPlaceholder": "Search...",
+      "selectCoursePlaceholder": "Select course",
+      "selectStatusPlaceholder": "Filter by status",
+      "courses": "courses",
+      "noClassroom": "No classrooms found.",
+      "noClassroomSubtext": "Try adjusting your search or filter to find what you're looking for."
+    },
+    "update": {
+      "basicInfo": {
+        "label": "Update Classroom Basic Information",
+        "weeks": "weeks",
+        "custom": "custom",
+        "classCode": "Class Code",
+        "className": "Class Name",
+        "description": "Description",
+        "descriptionPlaceholder": "Brief description of this classroom...",
+        "gradeLevel": "Grade Level",
+        "grade": "Grade",
+        "duration": "Duration",
+        "selectDuration": "Select Duration",
+        "startDate": "Start Date",
+        "endDate": "End Date"
+      },
+      "curriculum": "Update Course",
+      "teacher": "Update Classroom Teacher",
+      "students": {
+        "addStudents": "Add Students to Classroom",
+        "studentEmail": "Student Email",
+        "searchStudent": "Search students by email",
+        "studentEmailSubtext": "Search by name or email, or paste multiple emails separated by commas, spaces, or semicolons",
+        "students": "student(s)",
+        "selected": "selected",
+        "searchingStudents": "Searching students...",
+        "noStudentFound": "No students found for",
+        "noStudentFoundSubtext": "Try a different search or paste email directly"
+      }
+    },
+    "detail": {
+      "notFound": "Classroom not found.",
+      "notFoundSubtext": "The classroom you're looking for doesn't exist.",
+      "backToClassrooms": "Back to Classrooms",
+      "header": "Classroom Details",
+      "selected": "Selected",
+      "grade": "Grade",
+      "students": {
+        "label": "Students",
+        "noStudent": "No students enrolled yet.",
+        "noStudentSubtext": "Start building your class by adding students"
+      },
+      "course": "Course",
+      "curriculum": {
+        "label": "Curriculum"
+      },
+      "classCode": {
+        "label": "Class Code",
+        "description": "Share this code with students to join the classroom",
+        "copySuccess": "Class code copied to clipboard!"
+      },
+      "teacher": "Teacher",
+      "meet": {
+        "label": "Meet",
+        "joinButton": "Join Meeting"
+      },
+      "quickStats": {
+        "label": "Quick Stats",
+        "createdDate": "Created Date",
+        "lastUpdated": "Last Updated",
+        "duration": "Duration"
+      }
+    },
+    "create": {
+      "header": "Create New Classroom",
+      "subheader": "Follow the steps below to set up your classroom",
+      "basicInfo": "Basic Information",
+      "description": "Description",
+      "descriptionPlaceholder": "Brief description of this classroom...",
+      "duration": "Duration",
+      "selectDuration": "Select Duration",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "weeks": "Weeks",
+      "custom": "Custom",
+      "groupList": "Group List",
+      "grade": "Grade",
+      "selectSubscription": "Select Subscription",
+      "annual": "Annual",
+      "semiAnnual": "Semi-Annual",
+      "students": "Students",
+      "teachers": "Teachers",
+      "curricula": "Curricula"
+    },
+    "studentClassroom": {
+      "list": {
+        "title": "Student List",
+        "description": "Manage the students currently enrolled in this classroom.",
+        "number": "Number of students:",
+        "placeholder": "There is no students in the class."
+      },
+      "detail": {
+        "title": "Learning Profile",
+        "description": "Detailed progress and academic performance in the class.",
+        "quizScore": "Avg Quiz Score",
+        "asmScore": "Avg Assignment Score",
+        "quizTotal": "Total Quizzes",
+        "asmTotal": "Total Assignments",
+        "submitted": "submitted"
+      }
+    },
+    "myLearning": {
+      "title": "My Classrooms",
+      "noClassroom": "You are not enrolled in any classrooms yet.",
+      "noClassroomSubtext": "Explore available classrooms and start learning today!",
+      "grade": "Grade"
+    }
+  }
+}

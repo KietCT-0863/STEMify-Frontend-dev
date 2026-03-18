@@ -1,0 +1,46 @@
+{
+  "Resource": {
+    "title": "Thư viện",
+    "description": "Các khóa học được tuyển chọn kỹ lưỡng, bài học phù hợp với chương trình giảng dạy, hoạt động hấp dẫn và tài liệu hỗ trợ do các giáo viên chuyên gia biên soạn.",
+    "courses": {
+      "title": "Khóa học",
+      "description": "Các khóa học toàn diện được thiết kế để nâng cao việc học STEM và thúc đẩy sự phát triển sự nghiệp của bạn."
+    },
+    "lessons": {
+      "title": "Bài học",
+      "description": "Những bài học hấp dẫn, phù hợp với chương trình giảng dạy, giúp phát triển tư duy phản biện, kỹ năng giải quyết vấn đề."
+    },
+    "activities": {
+      "title": "Hoạt động",
+      "description": "Các hoạt động tương tác được thiết kế để giúp việc học trở nên thú vị và hấp dẫn, tăng cường sự tham gia và hiểu biết của học sinh."
+    },
+    "curriculum": {
+      "title": "Khung chương trình",
+      "description": "Khung chương trình được thiết kế bám sát dành cho học sinh từ lớp 3–8, tập trung vào sáng tạo và học tập qua thực hành."
+    },
+    "stemKit": {
+      "title": "Bộ công cụ STEM",
+      "description": "Khám phá các sản phẩm Bộ công cụ STEM của chúng tôi được thiết kế để nâng cao trải nghiệm học tập thực hành."
+    },
+    "strawAssemblyLibrary": {
+      "title": "Thư viện lắp ráp mô hình",
+      "description": "Truy cập bộ sưu tập mô hình 3D để nâng cao việc học tập và các dự án STEM của bạn."
+    },
+    "workspace3D": {
+      "title": "Môi trường lắp ráp 3D",
+      "description": "Tạo và thao tác các mô hình 3D cho các dự án STEM của bạn trong môi trường lắp ráp 3D của chúng tôi."
+    },
+    "microbitWorkspace": {
+      "title": "Môi trường Micro:bit",
+      "description": "Sử dụng môi trường Micro:bit của chúng tôi cho các hoạt động lập trình và STEM."
+    },
+    "modalMaker": {
+      "title": "Trình tạo Modal",
+      "description": "Tạo và tùy chỉnh các modal cho các dự án STEM của bạn một cách dễ dàng."
+    },
+    "robotAi": {
+      "title": "Robot AI",
+      "description": "Khám phá các tài nguyên Robot AI của chúng tôi để nâng cao hiểu biết của bạn về robot và trí tuệ nhân tạo."
+    }
+  }
+}

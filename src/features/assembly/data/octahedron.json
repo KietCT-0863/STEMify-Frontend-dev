@@ -1,0 +1,530 @@
+{
+  "id": "assembly_1",
+  "name": "Lắp ráp Khối Bát Diện Đều",
+  "description": "Khám phá khối Bát Diện Đều – một trong năm khối đa diện Platonic đã làm say mê các nhà toán học, kiến trúc sư và triết gia suốt hàng ngàn năm. Học viên sẽ mô hình hóa và lắp ráp hình khối đối xứng 3D với 8 mặt tam giác đều, đồng thời tìm hiểu các ví dụ và ứng dụng thực tế của hình khối này.",
+  "estimatedTime": 30,
+  "objective": "Học viên sẽ hiểu rõ hơn về đặc điểm và ý nghĩa toán học của khối Bát Diện Đều, rèn luyện kỹ năng lắp ráp mô hình 3D, và khám phá mối liên hệ giữa hình học không gian với các ứng dụng thực tế trong đời sống và kiến trúc.",
+  "imageUrl": "",
+  "steps": [
+    {
+      "id": "action_1",
+      "name": "Prepare Connectors",
+      "description": "Select 4 three-leg connectors to prepare for the base construction.",
+      "order": 1,
+      "straws": [],
+      "connectors": [
+        {
+          "id": "C003",
+          "name": "3-leg Connector",
+          "diameter": 1,
+          "color": "#f0201c",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "ports": [
+            {
+              "id": "C003-1",
+              "localPosition": [0, 0, 0],
+              "direction": [2, 0, 0]
+            },
+            {
+              "id": "C003-2",
+              "localPosition": [0, 0, 0],
+              "direction": [1, 2, 1]
+            },
+            {
+              "id": "C003-3",
+              "localPosition": [0, 0, 0],
+              "direction": [0, 0, 2]
+            }
+          ]
+        },
+        {
+          "id": "C003",
+          "name": "3-leg Connector",
+          "diameter": 1,
+          "color": "#f0201c",
+          "transform": {
+            "position": [0, 0, 12.2],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "ports": [
+            {
+              "id": "C003-1",
+              "localPosition": [0, 0, 0],
+              "direction": [2, 0, 0]
+            },
+            {
+              "id": "C003-2",
+              "localPosition": [0, 0, 0],
+              "direction": [1, 2, -1]
+            },
+            {
+              "id": "C003-3",
+              "localPosition": [0, 0, 0],
+              "direction": [0, 0, -2]
+            }
+          ]
+        },
+        {
+          "id": "C003",
+          "name": "3-leg Connector",
+          "diameter": 1,
+          "color": "#f0201c",
+          "transform": {
+            "position": [11.7, 0, 12.2],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "ports": [
+            {
+              "id": "C003-1",
+              "localPosition": [0, 0, 0],
+              "direction": [-2, 0, 0]
+            },
+            {
+              "id": "C003-2",
+              "localPosition": [0, 0, 0],
+              "direction": [-1, 2, -1]
+            },
+            {
+              "id": "C003-3",
+              "localPosition": [0, 0, 0],
+              "direction": [0, 0, -2]
+            }
+          ]
+        },
+        {
+          "id": "C003",
+          "name": "3-leg Connector",
+          "diameter": 1,
+          "color": "#f0201c",
+          "transform": {
+            "position": [11.7, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "ports": [
+            {
+              "id": "C003-1",
+              "localPosition": [0, 0, 0],
+              "direction": [-2, 0, 0]
+            },
+            {
+              "id": "C003-2",
+              "localPosition": [0, 0, 0],
+              "direction": [-1, 2, 1]
+            },
+            {
+              "id": "C003-3",
+              "localPosition": [0, 0, 0],
+              "direction": [0, 0, 2]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "action_2",
+      "name": "Build the Base Square",
+      "description": "Connect the 4 three-leg connectors with 4 straws to form a square on the horizontal plane.",
+      "order": 2,
+      "straws": [
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 0],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [11.2, 0, 0],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 0],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [0, 0, 11.7],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 1],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 11.2],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [11.2, 0, 11.2],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 1],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [11.7, 0, -0.5],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [11.7, 0, 11.2],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        }
+      ],
+      "connectors": []
+    },
+    {
+      "id": "action_3",
+      "name": "Add Vertical Straws",
+      "description": "Attach 4 vertical straws to the square's corners using the upward-facing ports of the connectors.",
+      "order": 3,
+      "straws": [
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 0],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, 11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [11.7, 0, 0],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, 11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 12.2],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, 11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [11.7, 0, 12.2],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, 11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        }
+      ],
+      "connectors": []
+    },
+    {
+      "id": "action_4",
+      "name": "Connect the Top Connector",
+      "description": "Join the tops of the 4 vertical straws to a single five-leg connector placed at the center.",
+      "order": 4,
+      "straws": [],
+      "connectors": [
+        {
+          "id": "C005",
+          "name": "4-leg Connector",
+          "diameter": 1,
+          "color": "#f0201c",
+          "transform": {
+            "position": [5.6, 11.2, 5.6],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "ports": [
+            {
+              "id": "C005-1",
+              "localPosition": [0, 0, 0],
+              "direction": [1, -2, -1]
+            },
+            {
+              "id": "C005-2",
+              "localPosition": [0, 0, 0],
+              "direction": [1, -2, 1]
+            },
+            {
+              "id": "C005-3",
+              "localPosition": [0, 0, 0],
+              "direction": [-1, -2, -1]
+            },
+            {
+              "id": "C005-4",
+              "localPosition": [0, 0, 0],
+              "direction": [-1, -2, 1]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "action_5",
+      "name": "Add Vertical Straws",
+      "description": "Attach 4 vertical straws to the square's corners using the downward-facing ports of the connectors.",
+      "order": 5,
+      "straws": [
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 0],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, -11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [11.7, 0, 0],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, -11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [0, 0, 12.2],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, -11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        },
+        {
+          "id": "straw_green",
+          "name": "Green Straw",
+          "geometry": { "length": 11.2, "diameter": 0.6, "wallThickness": 0.1 },
+          "color": "#c1e500",
+          "transform": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "endpoints": [
+            {
+              "id": "pink_start",
+              "localPosition": [11.7, 0, 12.2],
+              "connectionId": null
+            },
+            {
+              "id": "pink_end",
+              "localPosition": [5.6, -11.2, 5.6],
+              "connectionId": null
+            }
+          ],
+          "physics": { "mass": 0.3, "friction": 0.4, "elasticity": 0.2 }
+        }
+      ],
+      "connectors": []
+    },
+    {
+      "id": "action_6",
+      "name": "Connect the Top Connector",
+      "description": "Join the tops of the 4 vertical straws to a single five-leg connector placed at the center.",
+      "order": 6,
+      "straws": [],
+      "connectors": [
+        {
+          "id": "C005",
+          "name": "4-leg Connector",
+          "diameter": 1,
+          "color": "#f0201c",
+          "transform": {
+            "position": [5.6, -11.2, 5.6],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1]
+          },
+          "ports": [
+            {
+              "id": "C005-1",
+              "localPosition": [0, 0, 0],
+              "direction": [1, 2, -1]
+            },
+            {
+              "id": "C005-2",
+              "localPosition": [0, 0, 0],
+              "direction": [1, 2, 1]
+            },
+            {
+              "id": "C005-3",
+              "localPosition": [0, 0, 0],
+              "direction": [-1, 2, -1]
+            },
+            {
+              "id": "C005-4",
+              "localPosition": [0, 0, 0],
+              "direction": [-1, 2, 1]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
