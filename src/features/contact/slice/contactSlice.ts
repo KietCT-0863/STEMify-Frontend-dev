@@ -6,7 +6,7 @@ const initialState: ContactSliceParams = {
   pageSize: 5,
   search: '',
   orderBy: '',
-  status: ''
+  status: undefined
 }
 
 export const contactSlice = createQuerySlice('contactSlice', initialState)

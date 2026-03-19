@@ -31,7 +31,7 @@ export default function ContactList() {
     search: debouncedSearch.trim() || undefined,
     orderBy: contactParams.orderBy,
     sortDirection: contactParams.sortDirection,
-    status: contactParams.status
+    status: contactParams.status || undefined
   }
   const { data } = useSearchContactQuery(queryParams)
   const rows = React.useMemo(() => data?.data.items ?? [], [data])
@@ -63,7 +63,7 @@ export default function ContactList() {
             className='w-40'
             placeholder={tList('placeholder.status')}
             value={contactParams.status ?? ''}
-            onChange={(val) => dispatch(setParam({ key: 'status', value: val as ContactStatus }))}
+            onChange={(val) => dispatch(setParam({ key: 'status', value: val || undefined }))}
             options={statusOptions}
             onOpen={() => {
               // No action needed; statusOptions is static
