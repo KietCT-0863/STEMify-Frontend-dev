@@ -111,7 +111,7 @@ export const systemDashboardApi = createApi({
   tagTypes: ['SystemDashboard'],
   endpoints: (builder) => ({
     getSystemDashboard: builder.query<ApiSuccessResponse<SystemDashboardData>, SystemDashboardQueryParams>({
-      queryFn: async (params) => {
+      queryFn: async () => {
         // Tạm thời trả về mock data thay vì gọi API
         // TODO: Uncomment dòng dưới khi backend đã implement API /api/admin/dashboard
         /*
@@ -129,7 +129,8 @@ export const systemDashboardApi = createApi({
           data: {
             data: mockDashboardData,
             message: 'Success',
-            success: true
+            isSucceeded: true,
+            statusCode: 200
           }
         }
       },
