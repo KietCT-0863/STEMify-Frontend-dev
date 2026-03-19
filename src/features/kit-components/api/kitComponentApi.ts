@@ -9,7 +9,7 @@ export const componentApi = createCrudApi<Component, ComponentSliceParams>({
   endpoints: (builder) => ({
     createKitComponents: builder.mutation<void, { kitId: number; components: Partial<KitComponent>[] }>({
       query: ({ kitId, components }) => ({
-        url: `/api/kit-components`,
+        url: `/kit-components`,
         method: 'POST',
         body: { kitId, components }
       }),
@@ -17,7 +17,7 @@ export const componentApi = createCrudApi<Component, ComponentSliceParams>({
     }),
     updateKitComponents: builder.mutation<void, { components: Partial<KitComponent>[] }>({
       query: ({ components }) => ({
-        url: `/api/kit-components`,
+        url: `/kit-components`,
         method: 'PATCH',
         body: { components }
       }),
@@ -25,7 +25,7 @@ export const componentApi = createCrudApi<Component, ComponentSliceParams>({
     }),
     deleteKitComponents: builder.mutation<void, { ids: number[] }>({
       query: ({ ids }) => ({
-        url: `/api/kit-components`,
+        url: `/kit-components`,
         method: 'DELETE',
         body: { ids }
       }),

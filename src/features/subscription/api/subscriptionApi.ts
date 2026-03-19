@@ -15,7 +15,7 @@ export const subscriptionApi = createCrudApi<OrganizationSubscription, Organizat
   endpoints: (builder) => ({
     createSubscription: builder.mutation<ApiSuccessResponse<OrganizationSubscription>, SubscriptionFormData>({
       query: (data) => ({
-        url: '/api/organization-subscription-orders',
+        url: '/organization-subscription-orders',
         method: 'POST',
         body: data
       }),
@@ -26,7 +26,7 @@ export const subscriptionApi = createCrudApi<OrganizationSubscription, Organizat
       { subscriptionId: number; body: Partial<UpdateSubscriptionFormData> }
     >({
       query: ({ subscriptionId, body }) => ({
-        url: `/api/organization-subscription-orders/${subscriptionId}`,
+        url: `/organization-subscription-orders/${subscriptionId}`,
         method: 'PATCH',
         body
       }),

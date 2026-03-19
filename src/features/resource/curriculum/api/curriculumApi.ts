@@ -9,7 +9,7 @@ export const curriculumApi = createCrudApi<Curriculum, CurriculumSliceParams>({
   endpoints: (builder) => ({
     addCourseToCurriculum: builder.mutation<Curriculum, { curriculumId: number; courseIds: number[] }>({
       query: ({ curriculumId, courseIds }) => ({
-        url: `/api/curriculums/${curriculumId}/courses`,
+        url: `/curriculums/${curriculumId}/courses`,
         method: 'POST',
         body: {
           courseIds
@@ -23,7 +23,7 @@ export const curriculumApi = createCrudApi<Curriculum, CurriculumSliceParams>({
     }),
     deleteCourseFromCurriculum: builder.mutation<Curriculum, { curriculumId: number; courseIds: number[] }>({
       query: ({ curriculumId, courseIds }) => ({
-        url: `/api/curriculums/${curriculumId}/courses`,
+        url: `/curriculums/${curriculumId}/courses`,
         method: 'DELETE',
         body: {
           courseIds
@@ -38,7 +38,7 @@ export const curriculumApi = createCrudApi<Curriculum, CurriculumSliceParams>({
 
     updateCourseOrder: builder.mutation<Curriculum, { curriculumId: number; orderedCourseIds: number[] }>({
       query: ({ curriculumId, orderedCourseIds }) => ({
-        url: `/api/curriculums/${curriculumId}/courses`,
+        url: `/curriculums/${curriculumId}/courses`,
         method: 'PATCH',
         body: {
           orderedCourseIds
@@ -52,7 +52,7 @@ export const curriculumApi = createCrudApi<Curriculum, CurriculumSliceParams>({
     }),
     addEmulationToCurriculum: builder.mutation<Curriculum, { curriculumId: number; emulationIds: string[] }>({
       query: ({ curriculumId, emulationIds }) => ({
-        url: `/api/curriculums/${curriculumId}/emulations`,
+        url: `/curriculums/${curriculumId}/emulations`,
         method: 'POST',
         body: {
           emulationIds
@@ -66,7 +66,7 @@ export const curriculumApi = createCrudApi<Curriculum, CurriculumSliceParams>({
     }),
     deleteEmulationFromCurriculum: builder.mutation<Curriculum, { curriculumId: number; emulationIds: string[] }>({
       query: ({ curriculumId, emulationIds }) => ({
-        url: `/api/curriculums/${curriculumId}/emulations`,
+        url: `/curriculums/${curriculumId}/emulations`,
         method: 'DELETE',
         body: {
           emulationIds

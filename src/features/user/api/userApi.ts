@@ -17,7 +17,7 @@ export const userApi = createCrudApi<User, UserSliceParams>({
     // search users by organization subscription id and license type
     searchUserV2: builder.query<ApiSuccessResponse<PaginatedResult<User>>, UserSliceParams>({
       query: (userSliceParams) => ({
-        url: `/api/users/search`,
+        url: `/users/search`,
         method: 'GET',
         params: userSliceParams
       })
@@ -29,7 +29,7 @@ export const userApi = createCrudApi<User, UserSliceParams>({
       OrganizationUserQueryParams
     >({
       query: ({ organizationId, pageNumber, pageSize, role, email }) => ({
-        url: `/api/organizations/${organizationId}/users`,
+        url: `/organizations/${organizationId}/users`,
         method: 'GET',
         params: { pageNumber, pageSize, role, email }
       }),

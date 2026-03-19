@@ -19,7 +19,7 @@ export const studentProgressApi = createCrudApi<StudentProgress, StudentProgress
       { enrollmentId?: number }
     >({
       query: ({ enrollmentId }) => ({
-        url: `/api/student-progress/lessons`,
+        url: `/student-progress/lessons`,
         method: 'GET',
         params: { enrollmentId }
       }),
@@ -27,7 +27,7 @@ export const studentProgressApi = createCrudApi<StudentProgress, StudentProgress
     }),
     updateLessonStudentProgress: builder.mutation<void, { lessonId: number; enrollmentId: number }>({
       query: ({ lessonId, enrollmentId }) => ({
-        url: `/api/student-progress/lessons`,
+        url: `/student-progress/lessons`,
         method: 'PATCH',
         body: { lessonId, enrollmentId }
       }),
@@ -40,7 +40,7 @@ export const studentProgressApi = createCrudApi<StudentProgress, StudentProgress
       { enrollmentId?: number; lessonId?: number }
     >({
       query: ({ enrollmentId, lessonId }) => ({
-        url: `/api/student-progress/sections`,
+        url: `/student-progress/sections`,
         method: 'GET',
         params: { enrollmentId, lessonId }
       }),
@@ -48,7 +48,7 @@ export const studentProgressApi = createCrudApi<StudentProgress, StudentProgress
     }),
     updateSectionStudentProgress: builder.mutation<void, UpdateSectionStudentProgress>({
       query: ({ sectionId, enrollmentId, lessonId, status }) => ({
-        url: `/api/student-progress/sections`,
+        url: `/student-progress/sections`,
         method: 'PATCH',
         body: { sectionId, enrollmentId, lessonId, status }
       }),
