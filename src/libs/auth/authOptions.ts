@@ -3,6 +3,7 @@ import type { NextAuthOptions } from 'next-auth'
 import type { OAuthConfig } from 'next-auth/providers/oauth'
 import NextAuth, { type Profile } from 'next-auth'
 import { UserRole } from '@/types/userRole'
+import { env } from '@/libs/env'
 
 interface OIDCProfile extends Profile {
   sub: string
@@ -19,26 +20,26 @@ const oidcProvider: OAuthConfig<OIDCProfile> = {
   type: 'oauth',
   version: '2.0',
   // clientSecret: process.env.CLIENT_SECRET,
-  clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
+  clientId: env.CLIENT_ID,
   idToken: true,
-  issuer: process.env.NEXT_PUBLIC_IDENTITY_SERVER_URL,
-  wellKnown: `${process.env.NEXT_PUBLIC_IDENTITY_SERVER_URL}/.well-known/openid-configuration`,
+  issuer: env.IDENTITY_SERVER_URL,
+  wellKnown: `${env.IDENTITY_SERVER_URL}/.well-known/openid-configuration`,
   authorization: {
-    url: `${process.env.NEXT_PUBLIC_IDENTITY_SERVER_URL}/connect/authorize`,
+    url: `${env.IDENTITY_SERVER_URL}/connect/authorize`,
     params: {
-      scope: process.env.NEXT_PUBLIC_SCOPES,
+      scope: env.SCOPES,
       prompt: 'login'
     }
   },
   token: {
-    url: `${process.env.NEXT_PUBLIC_IDENTITY_SERVER_URL}/connect/token`,
+    url: `${env.IDENTITY_SERVER_URL}/connect/token`,
     params: {
       grant_type: 'authorization_code'
       // client_id: process.env.NEXT_PUBLIC_CLIENT_ID
       // redirect_uri: process.env.NEXT_PUBLIC_REDIRECT_URI
     }
   },
-  userinfo: `${process.env.NEXT_PUBLIC_IDENTITY_SERVER_URL}/connect/userinfo`,
+  userinfo: `${env.IDENTITY_SERVER_URL}/connect/userinfo`,
   client: {
     token_endpoint_auth_method: 'none'
   },
