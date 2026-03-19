@@ -9,6 +9,10 @@ const mockDashboardData: SystemDashboardData = {
     totalOrganizations: 150,
     activeOrganizations: 120,
     totalStudents: 5420,
+    totalTeachers: 342,
+    totalClassrooms: 486,
+    totalCertificates: 2150,
+    overallPassRate: 78.5,
     totalEnrollments: 8350
   },
   subscriptions: {
@@ -19,63 +23,85 @@ const mockDashboardData: SystemDashboardData = {
     byPlan: [
       {
         planName: 'Basic',
+        count: 45,
         activeCount: 45,
         revenue: 90000000
       },
       {
         planName: 'Premium',
+        count: 75,
         activeCount: 75,
         revenue: 360000000
       }
     ]
   },
   enrollments: {
+    totalEnrollments: 8350,
+    completedEnrollments: 5678,
+    inProgressEnrollments: 2672,
+    enrollmentsByMonth: [],
     completionRate: 68
   },
   topCourses: [
     {
       courseId: 1,
+      courseCode: 'PY101',
       courseName: 'Lập trình Python cơ bản',
-      enrollmentCount: 450,
-      completionRate: 72
+      totalEnrollments: 450,
+      completionRate: 72,
+      averageScore: 85.5,
+      totalClassrooms: 12
     },
     {
       courseId: 2,
+      courseCode: 'ROB101',
       courseName: 'Robotics cho người mới bắt đầu',
-      enrollmentCount: 380,
-      completionRate: 65
+      totalEnrollments: 380,
+      completionRate: 65,
+      averageScore: 78.3,
+      totalClassrooms: 10
     },
     {
       courseId: 3,
+      courseCode: 'AI201',
       courseName: 'AI và Machine Learning',
-      enrollmentCount: 320,
-      completionRate: 58
+      totalEnrollments: 320,
+      completionRate: 58,
+      averageScore: 82.1,
+      totalClassrooms: 8
     }
   ],
   topOrganizations: [
     {
       organizationId: 1,
       organizationName: 'Trường THPT Chuyên Lê Hồng Phong',
-      studentCount: 850,
-      activeSubscription: 'Premium'
+      totalStudents: 850,
+      totalEnrollments: 1250,
+      passRate: 85.2,
+      activeSubscriptions: 2
     },
     {
       organizationId: 2,
       organizationName: 'Trường THCS Nguyễn Du',
-      studentCount: 620,
-      activeSubscription: 'Basic'
+      totalStudents: 620,
+      totalEnrollments: 890,
+      passRate: 76.8,
+      activeSubscriptions: 1
     },
     {
       organizationId: 3,
       organizationName: 'Trung tâm STEM Việt Nam',
-      studentCount: 540,
-      activeSubscription: 'Premium'
+      totalStudents: 540,
+      totalEnrollments: 780,
+      passRate: 88.5,
+      activeSubscriptions: 2
     }
   ],
   periodComparison: {
     revenueGrowth: 15.5,
     organizationGrowth: 8.2,
-    studentGrowth: 12.3
+    studentGrowth: 12.3,
+    enrollmentGrowth: 18.7
   }
 }
 
