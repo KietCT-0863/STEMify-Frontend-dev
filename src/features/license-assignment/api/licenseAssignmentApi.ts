@@ -17,7 +17,7 @@ export const licenseAssignmentApi = createCrudApi<LicenseAssignment, LicenseAssi
       { organization_id: string; users: LicenseAssignmentCreatePayload[] }
     >({
       query: ({ organization_id, users }) => ({
-        url: `/organizations/${organization_id}/invitations/invite`,
+        url: `/api/organizations/${organization_id}/invitations/invite`,
         method: 'POST',
         body: { users }
       }),
@@ -25,7 +25,7 @@ export const licenseAssignmentApi = createCrudApi<LicenseAssignment, LicenseAssi
     }),
     uploadCSVBulk: builder.mutation<void, { organization_id: string; body: UploadBulkCsvInvitation }>({
       query: ({ organization_id, body }) => ({
-        url: `/organizations/${organization_id}/bulk-invitations/upload`,
+        url: `/api/organizations/${organization_id}/bulk-invitations/upload`,
         method: 'POST',
         body
       }),

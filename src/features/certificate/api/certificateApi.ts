@@ -9,7 +9,7 @@ export const certificateApi = createApi({
   tagTypes: ['Certificate'],
   endpoints: (builder) => ({
     getById: builder.query<ApiSuccessResponse<Certificate>, number | string>({
-      query: (id) => `/certificates/${id}`,
+      query: (id) => `/api/certificates/${id}`,
       transformResponse: (response: any) => {
         return {
           ...response,
@@ -21,7 +21,7 @@ export const certificateApi = createApi({
 
     search: builder.query<ApiSuccessResponse<PaginatedResult<Certificate>>, CertificateQueryParams>({
       query: (params) => ({
-        url: '/certificates',
+        url: '/api/certificates',
         method: 'GET',
         params
       }),

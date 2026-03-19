@@ -10,7 +10,7 @@ export const cartApi = createCrudApi<Cart, CartQueryParams>({
   endpoints: (builder) => ({
     getCartByUserId: builder.query<ApiSuccessResponse<Cart>, { userId: string }>({
       query: ({ userId }) => ({
-        url: `/carts`,
+        url: `/api/carts`,
         method: 'GET',
         params: { userId }
       })
@@ -20,7 +20,7 @@ export const cartApi = createCrudApi<Cart, CartQueryParams>({
       { userId: string; productId: number; quantity: number }
     >({
       query: ({ userId, productId, quantity }) => ({
-        url: `/carts`,
+        url: `/api/carts`,
         method: 'POST',
         body: { userId, productId, quantity }
       }),
@@ -38,7 +38,7 @@ export const cartApi = createCrudApi<Cart, CartQueryParams>({
     }),
     deleteCartItem: builder.mutation<ApiSuccessResponse<Cart>, { userId: string; productId: number }>({
       query: ({ userId, productId }) => ({
-        url: `/carts/items/${productId}`,
+        url: `/api/carts/items/${productId}`,
         method: 'DELETE',
         params: { userId }
       }),

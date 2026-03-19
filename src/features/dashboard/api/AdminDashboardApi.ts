@@ -10,7 +10,7 @@ export const systemDashboardApi = createApi({
   endpoints: (builder) => ({
     getSystemDashboard: builder.query<ApiSuccessResponse<SystemDashboardData>, SystemDashboardQueryParams>({
       query: (params) => ({
-        url: '/admin/dashboard',
+        url: '/api/admin/dashboard',
         method: 'GET',
         params: params
       }),

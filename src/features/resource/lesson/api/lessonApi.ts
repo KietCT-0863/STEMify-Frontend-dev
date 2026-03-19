@@ -9,7 +9,7 @@ export const lessonApi = createCrudApi<Lesson, LessonQueryParams>({
   endpoints: (builder) => ({
     updateLessonSectionOrder: builder.mutation<any, { id: number; orderedSectionIds: number[] }>({
       query: ({ id, orderedSectionIds }) => ({
-        url: `/lessons/${id}/sections-reorder`,
+        url: `/api/lessons/${id}/sections-reorder`,
         method: 'PATCH',
         body: { orderedSectionIds }
       }),

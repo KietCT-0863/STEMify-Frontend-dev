@@ -25,6 +25,9 @@ const customFetchBaseQuery = fetchBaseQuery({
     if (activeOrg) headers.set('X-Active-Organization', String(activeOrg))
     if (activeSub) headers.set('X-Active-Subscription', String(activeSub))
 
+    // Always set Accept header to indicate this is an API request expecting JSON
+    headers.set('Accept', 'application/json')
+
     return headers
   }
 })
@@ -84,6 +87,9 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
   baseUrl,
   baseQuery = customFetchBaseQueryWithErrorHandling
 }: CrudApiOptions) {
+  // Normalize baseUrl to ensure it starts with /api
+  const normalizedBaseUrl = baseUrl.startsWith('/api/') ? baseUrl : `/api${baseUrl}`
+
   const handleDynamicUrl = (url: string, params: any) => {
     let dynamicUrl = url
     const queryParams = { ...params }
@@ -110,14 +116,14 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
     endpoints: (builder) => ({
       // GET: classrooms/1
       getById: builder.query<ApiSuccessResponse<T>, number | string>({
-        query: (id) => `${baseUrl}/${id}`,
+        query: (id) => `${normalizedBaseUrl}/${id}`,
         providesTags: (result, error, id) => [...tagTypes.map((t) => ({ type: t, id }))]
       }),
 
       // GET: classrooms
       getAll: builder.query<ApiSuccessResponse<PaginatedResult<T>>, void | SearchPaginatedRequestParams>({
         query: (params) => {
-          const { dynamicUrl, queryParams } = handleDynamicUrl(baseUrl, params || {})
+          const { dynamicUrl, queryParams } = handleDynamicUrl(normalizedBaseUrl, params || {})
           return { url: dynamicUrl, params: queryParams }
         },
         providesTags: tagTypes
@@ -126,7 +132,7 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
       // GET: search/classrooms?sort=nameAsc&pageNumber=1&pageSize=3&search=steam
       search: builder.query<ApiSuccessResponse<PaginatedResult<T>>, P>({
         query: (params) => {
-          const { dynamicUrl, queryParams } = handleDynamicUrl(baseUrl, params)
+          const { dynamicUrl, queryParams } = handleDynamicUrl(normalizedBaseUrl, params)
 
           return {
             url: dynamicUrl,
@@ -143,7 +149,7 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
       // POST: classrooms/2
       create: builder.mutation<ApiSuccessResponse<T>, Partial<T>>({
         query: (body) => ({
-          url: baseUrl,
+          url: normalizedBaseUrl,
           method: 'POST',
           body
         }),
@@ -153,7 +159,7 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
       // PUT: classrooms/2
       update: builder.mutation<ApiSuccessResponse<T>, { id: string | number; body: Partial<T> }>({
         query: ({ id, body }) => ({
-          url: `${baseUrl}/${id}`,
+          url: `${normalizedBaseUrl}/${id}`,
           method: 'PATCH',
           body
         }),
@@ -163,7 +169,7 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
       // DELETE: classrooms/2
       delete: builder.mutation<ApiResponse, number | string>({
         query: (id) => ({
-          url: `${baseUrl}/${id}`,
+          url: `${normalizedBaseUrl}/${id}`,
           method: 'DELETE'
         }),
         invalidatesTags: (result, error, id) => [...tagTypes.map((t) => ({ type: t, id })), ...tagTypes]

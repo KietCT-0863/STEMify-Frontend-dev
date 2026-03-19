@@ -19,7 +19,7 @@ export const organizationApi = createCrudApi<Organization, OrganizationSlicePara
       ApiSuccessResponse<PaginatedResult<OrganizationType>>,
       OrganizationSliceParams
     >({
-      query: () => '/organization-types',
+      query: () => '/api/organization-types',
       providesTags: ['Organization']
     }),
     getCurriculumsByOrganizationId: build.query<
@@ -27,7 +27,7 @@ export const organizationApi = createCrudApi<Organization, OrganizationSlicePara
       { organizationId: number; status?: string }
     >({
       query: ({ organizationId, status }) => ({
-        url: `/organizations/${organizationId}/curriculums`,
+        url: `/api/organizations/${organizationId}/curriculums`,
         params: status ? { status } : undefined
       }),
       providesTags: ['Organization']

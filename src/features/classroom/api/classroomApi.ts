@@ -23,7 +23,7 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
   endpoints: (builder) => ({
     addClassroomStudents: builder.mutation<void, { classroomId: number; studentEmails: string[] }>({
       query: ({ classroomId, studentEmails }) => ({
-        url: `/classrooms/${classroomId}/classroom-students/bulk`,
+        url: `/api/classrooms/${classroomId}/classroom-students/bulk`,
         method: 'POST',
         body: { studentEmails }
       }),
@@ -31,7 +31,7 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
     }),
     deleteClassroomStudents: builder.mutation<void, { classroomId: number; studentIds: string[] }>({
       query: ({ classroomId, studentIds }) => ({
-        url: `/classrooms/${classroomId}/classroom-students/bulk`,
+        url: `/api/classrooms/${classroomId}/classroom-students/bulk`,
         method: 'DELETE',
         body: { studentIds }
       }),
@@ -41,7 +41,7 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
     // PATCH: classrooms/1/curriculum
     updateClassroomCourse: builder.mutation<any, { classroomId: number; courseId: number }>({
       query: ({ classroomId, courseId }) => ({
-        url: `/classrooms/${classroomId}`,
+        url: `/api/classrooms/${classroomId}`,
         method: 'PATCH',
         body: { courseId }
       }),
@@ -50,7 +50,7 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
 
     updateTeacherClassroom: builder.mutation<any, { classroomId: number; teacherId: string }>({
       query: ({ classroomId, teacherId }) => ({
-        url: `/classrooms/${classroomId}`,
+        url: `/api/classrooms/${classroomId}`,
         method: 'PATCH',
         body: { teacherId }
       }),
@@ -59,7 +59,7 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
 
     getClassroomStudentProgress: builder.query<ApiSuccessResponse<StudentProgressData>, StudentProgressParams>({
       query: ({ classroomId, courseId }) => ({
-        url: `/classrooms/${classroomId}/student-progress`,
+        url: `/api/classrooms/${classroomId}/student-progress`,
         method: 'GET',
         params: { courseId }
       }),
@@ -67,22 +67,22 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
     }),
     getClassroomSchedule: builder.query<ApiSuccessResponse<ClassroomSchedule>, { classroomId: number }>({
       query: ({ classroomId }) => ({
-        url: `/classrooms/${classroomId}/schedule`
+        url: `/api/classrooms/${classroomId}/schedule`
       })
     }),
     getClassroomStatistics: builder.query<ApiSuccessResponse<ClassroomStatisticData>, { classroomId: number }>({
       query: ({ classroomId }) => ({
-        url: `/classrooms/${classroomId}/statistic`
+        url: `/api/classrooms/${classroomId}/statistic`
       })
     }),
     getClassroomStudentDetail: builder.query<ApiSuccessResponse<StudentDetailResponse>, StudentClassroomParams>({
       query: ({classroomId, studentId}) => ({
-        url: `/classrooms/${classroomId}/classroom-students/${studentId}`
+        url: `/api/classrooms/${classroomId}/classroom-students/${studentId}`
       })
     }),
     createClassroom: builder.mutation<ApiSuccessResponse<Classroom>, Partial<CreateClassroom>>({
       query: (body) => ({
-        url: `/classrooms`,
+        url: `/api/classrooms`,
         method: 'POST',
         body
       }),
@@ -90,7 +90,7 @@ export const classroomApi = createCrudApi<Classroom, ClassroomSliceParams>({
     }),
     analyzeClassroomProgress: builder.mutation<ApiSuccessResponse<AiAnalysisResponse>, AiAnalysisRequest>({
       query: (body) => ({
-        url: `/ai/recommendations/analyze-progress`,
+        url: `/api/ai/recommendations/analyze-progress`,
         method: 'POST',
         body
       })

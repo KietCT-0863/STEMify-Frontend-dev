@@ -12,7 +12,7 @@ export const orgDashboardApi = createApi({
       query: (params) => {
         const { organizationId, ...queryParams } = params
 
-        const dynamicUrl = `/organizations/${organizationId}/dashboard`
+        const dynamicUrl = `/api/organizations/${organizationId}/dashboard`
 
         return {
           url: dynamicUrl,

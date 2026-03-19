@@ -13,7 +13,7 @@ export const groupApi = createCrudApi<Group, GroupQueryParams>({
       { organizationId: number; params: GroupQueryParams }
     >({
       query: ({ organizationId, params }) => ({
-        url: `/organizations/${organizationId}/groups`,
+        url: `/api/organizations/${organizationId}/groups`,
         method: 'GET',
         params
       }),
@@ -25,7 +25,7 @@ export const groupApi = createCrudApi<Group, GroupQueryParams>({
       { groupId: number; studentIds: string[] }
     >({
       query: ({ groupId, studentIds }) => ({
-        url: `/groups/${groupId}/students`,
+        url: `/api/groups/${groupId}/students`,
         method: 'POST',
         body: { studentIds }
       }),
@@ -37,7 +37,7 @@ export const groupApi = createCrudApi<Group, GroupQueryParams>({
       { groupId: number; studentIds: string[] }
     >({
       query: ({ groupId, studentIds }) => ({
-        url: `/groups/${groupId}/students`,
+        url: `/api/groups/${groupId}/students`,
         method: 'DELETE',
         body: { studentIds }
       }),

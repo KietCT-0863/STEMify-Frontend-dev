@@ -17,7 +17,7 @@ export const quizApi = createCrudApi<Quiz, QuizQueryParams>({
   endpoints: (builder) => ({
     getStudentQuizById: builder.query<ApiSuccessResponse<QuizAttempt>, number>({
       query: (id: number) => ({
-        url: `/student-quizzes/${id}`
+        url: `/api/student-quizzes/${id}`
       }),
       providesTags: (result, error, id) => [{ type: 'Quiz', id }]
     }),
@@ -26,13 +26,13 @@ export const quizApi = createCrudApi<Quiz, QuizQueryParams>({
       { classroomId: number }
     >({
       query: ({ classroomId }) => ({
-        url: `/student-quizzes`,
+        url: `/api/student-quizzes`,
         params: { classroomId }
       })
     }),
     createQuizAttempt: builder.mutation<ApiSuccessResponse<Attempt>, { studentQuizId: number }>({
       query: ({ studentQuizId }) => ({
-        url: `/quiz-attempts`,
+        url: `/api/quiz-attempts`,
         method: 'POST',
         body: {
           studentQuizId
@@ -49,7 +49,7 @@ export const quizApi = createCrudApi<Quiz, QuizQueryParams>({
       }
     >({
       query: ({ quizAttemptId, questionAttempts }) => ({
-        url: `/quiz-attempts/${quizAttemptId}`,
+        url: `/api/quiz-attempts/${quizAttemptId}`,
         method: 'PATCH',
         body: { questionAttempts }
       }),
@@ -63,14 +63,14 @@ export const quizApi = createCrudApi<Quiz, QuizQueryParams>({
       void
     >({
       query: () => ({
-        url: `/quizzes/template`,
+        url: `/api/quizzes/template`,
         method: 'GET'
       })
     }),
     importQuizCSV: builder.mutation<ApiSuccessResponse<QuizImportResponse>, { csvFile: string; quizId: number }>({
       query: ({ quizId, csvFile }) => {
         return {
-          url: `/quizzes/${quizId}/import`,
+          url: `/api/quizzes/${quizId}/import`,
           method: 'POST',
           body: { csvFile }
         }
