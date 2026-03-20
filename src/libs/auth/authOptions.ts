@@ -72,16 +72,16 @@ export const authOptions: NextAuthOptions = {
       if (account?.access_token) {
         token.accessToken = account.access_token
         token.idToken = account.id_token
-        
-        
+
+
         try {
           const decoded: any = jwtDecode(account.access_token)
-          const accessTokenRole = 
+          const accessTokenRole =
             decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] ||
             decoded['platform_role'] ||
             decoded['role'] ||
             UserRole.GUEST
-          
+
           let mappedRole: UserRole = UserRole.GUEST
           if (accessTokenRole === 'Admin' || accessTokenRole === 'admin') {
             mappedRole = UserRole.ADMIN
@@ -90,44 +90,44 @@ export const authOptions: NextAuthOptions = {
           } else if (accessTokenRole === 'Member' || accessTokenRole === 'member') {
             mappedRole = UserRole.MEMBER
           }
-          
+
           token.role = mappedRole
-          
-         token.name = decoded['name'] || 
-                      decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/name'] ||
-                      token.name ||
-                      'Unnamed'
-          
-          token.email = decoded['email'] || 
-                       decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress'] ||
-                       token.email ||
-                       'no-email@example.com'
-          
-          token.preferred_username = decoded['preferred_username'] || 
-                                     decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/name'] ||
-                                     decoded['name'] ||
-                                     token.preferred_username ||
-                                     'unknown'
-          
+
+          token.name = decoded['name'] ||
+            decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/name'] ||
+            token.name ||
+            'Unnamed'
+
+          token.email = decoded['email'] ||
+            decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress'] ||
+            token.email ||
+            'no-email@example.com'
+
+          token.preferred_username = decoded['preferred_username'] ||
+            decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/name'] ||
+            decoded['name'] ||
+            token.preferred_username ||
+            'unknown'
+
           token.username = decoded['preferred_username'] ||
-                          decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/name'] ||
-                          decoded['name'] ||
-                          token.username ||
-                          'unknown'
-          
+            decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/name'] ||
+            decoded['name'] ||
+            token.username ||
+            'unknown'
+
           token.sub = decoded['sub'] ?? token.sub ?? 'unknown'
-        
+
 
           const rawOrganizations = decoded['organizations']
           if (rawOrganizations) {
             try {
-              const parsedOrgs = typeof rawOrganizations === 'string' 
-                ? JSON.parse(rawOrganizations) 
+              const parsedOrgs = typeof rawOrganizations === 'string'
+                ? JSON.parse(rawOrganizations)
                 : rawOrganizations
-              
+
               if (parsedOrgs && typeof parsedOrgs === 'object') {
                 token.organizations = parsedOrgs
-             
+
               } else {
                 token.organizations = undefined
               }
@@ -141,7 +141,7 @@ export const authOptions: NextAuthOptions = {
                 const parsed = typeof profileOrgs === 'string' ? JSON.parse(profileOrgs) : profileOrgs
                 if (parsed && typeof parsed === 'object') {
                   token.organizations = parsed
-        
+
                 } else {
                   token.organizations = undefined
                 }
@@ -168,8 +168,8 @@ export const authOptions: NextAuthOptions = {
         session.user.userName = (token.username || token.preferred_username || 'unknown') as string
         session.user.userId = token.sub!
         session.exp = token.exp!
-        
-       session.user.name = (token.name || session.user.name || 'Unnamed') as string
+
+        session.user.name = (token.name || session.user.name || 'Unnamed') as string
         session.user.email = (token.email || session.user.email || 'no-email@example.com') as string
 
         session.user.organizations = token.organizations
