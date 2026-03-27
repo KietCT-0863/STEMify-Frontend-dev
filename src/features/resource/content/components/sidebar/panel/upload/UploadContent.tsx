@@ -44,11 +44,15 @@ export default function UploadContent() {
         }
       })
     )
-    await uploadFiles({
-      lessonId: Number(lessonId),
-      body: { lessonAssets }
-    })
-    toast.success(tt('successMessage.uploadFile'))
+    try {
+      await uploadFiles({
+        lessonId: Number(lessonId),
+        body: { lessonAssets }
+      }).unwrap()
+      toast.success(tt('successMessage.uploadFile'))
+    } catch (error) {
+      console.error('Failed to upload files:', error)
+    }
   }
 
   return (
