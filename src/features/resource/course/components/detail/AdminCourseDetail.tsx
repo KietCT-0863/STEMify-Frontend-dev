@@ -318,7 +318,7 @@ export default function AdminCourseDetail() {
             </div>
           )} */}
 
-        {/* <ExportRSAButton courseId={course.data.id} /> */}
+        <ExportRSAButton courseId={course.data.id} />
       </div>
       {/* Kit Section */}
       <div className='xl:col-span-3'>
