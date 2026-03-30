@@ -105,7 +105,7 @@ const ProductCard: React.FC<{ product: Kit; index: number }> = ({ product, index
               {t('list.statusOptions.preOrder')}
             </span>
           ) : (
-            <span className='text-xl font-bold text-red-600'>{product.price.toLocaleString('en-US')} VND</span>
+            <span className='text-xl font-bold text-red-600'>{(product.price ?? 0).toLocaleString('en-US')} VND</span>
           )}
 
           <motion.button
