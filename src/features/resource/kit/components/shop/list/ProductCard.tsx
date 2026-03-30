@@ -57,11 +57,6 @@ const ProductCard: React.FC<{ product: Kit; index: number }> = ({ product, index
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
         >
-          {isHovered && (
-            <video autoPlay loop muted playsInline className='h-full w-full object-cover'>
-              <source src='https://res.cloudinary.com/dgdi9wvpz/video/upload/1009_1_yfgzqp.mp4' type='video/mp4' />
-            </video>
-          )}
         </motion.div>
 
         {/* Overlay Gradient */}

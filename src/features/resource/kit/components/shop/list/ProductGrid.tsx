@@ -51,7 +51,7 @@ const ProductsGrid: React.FC<{ products: ProductData[] }> = ({ products }) => {
       >
         <div className='grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3'>
           {kitData.data.items.map((product, index) => (
-            <Link href={`/shop/${product.id}`} key={product.id}>
+            <Link href={`/resource/stem-kit/${product.id}`} key={product.id}>
               <ProductCard key={product.id} product={product} index={index} />
             </Link>
           ))}
