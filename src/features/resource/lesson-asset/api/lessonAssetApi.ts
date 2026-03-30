@@ -35,11 +35,26 @@ export const lessonAssetApi = lessonApi.injectEndpoints({
       ApiSuccessResponse<{ assets: PostLessonResponseBody[] }>,
       { lessonId: number; body: PostLessonAssetRequestBody }
     >({
-      query: ({ lessonId, body }) => ({
-        url: `/lessons/${lessonId}/lesson-assets`,
-        method: 'POST',
-        body
-      }),
+      query: ({ lessonId, body }) => {
+        // Check if any file is larger than 5MB
+        const hasLargeFile = body.lessonAssets.some((asset) => {
+          // Estimate file size from base64 (base64 is ~33% larger than original)
+          const base64Length = asset.assetBytes.length
+          const estimatedSize = (base64Length * 3) / 4
+          return estimatedSize > 5 * 1024 * 1024 // 5MB
+        })
+
+        // Use upload.stemify.site for large files, api.stemify.site for small files
+        const baseUrl = hasLargeFile 
+          ? process.env.NEXT_PUBLIC_UPLOAD_API_URL || 'https://upload.stemify.site'
+          : process.env.NEXT_PUBLIC_API_URL || 'https://api.stemify.site'
+
+        return {
+          url: `${baseUrl}/lessons/${lessonId}/lesson-assets`,
+          method: 'POST',
+          body
+        }
+      },
       invalidatesTags: [{ type: 'LessonAsset', id: 'LIST' }]
     }),
     // DELETE
