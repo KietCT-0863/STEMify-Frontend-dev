@@ -35,7 +35,7 @@ export default function LessonTable({ courseIdSelected }: { courseIdSelected?: n
   const dispatch = useAppDispatch()
   const lessonParams = useAppSelector((state) => state.lesson)
 
-  const queryParams: LessonQueryParams = {
+  const queryParams: LessonQueryParams = React.useMemo(() => ({
     courseId: courseIdSelected || lessonParams.courseId,
     createdByUserId: lessonParams.createdByUserId,
     ageRangeId: lessonParams.ageRangeId,
@@ -48,7 +48,7 @@ export default function LessonTable({ courseIdSelected }: { courseIdSelected?: n
     status: lessonParams.status,
     orderBy: courseIdSelected ? 'orderindex' : 'createdDate',
     sortDirection: courseIdSelected ? 'Asc' : 'Desc'
-  }
+  }), [courseIdSelected, lessonParams])
   console.log('Lesson query params:', queryParams)
 
   useEffect(() => {
@@ -56,7 +56,7 @@ export default function LessonTable({ courseIdSelected }: { courseIdSelected?: n
     if (courseId) {
       dispatch(setPageSize(50))
     } else dispatch(setPageSize(8))
-  }, [dispatch])
+  }, [dispatch, courseId])
 
   const { data } = useSearchLessonQuery(queryParams)
   const [updateCourseLessonOrder] = useUpdateLessonOrderMutation()
