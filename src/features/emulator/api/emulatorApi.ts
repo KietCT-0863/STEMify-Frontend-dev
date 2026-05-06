@@ -36,7 +36,7 @@ export const emulatorApi = createApi({
       }),
       providesTags: ['Emulator']
     }),
-    searchEmulations: builder.query<ApiSuccessResponse<EmulatorResponse>, EmulatorSearchParams>({
+    searchEmulations: builder.query<EmulatorResponse, EmulatorSearchParams>({
       query: (queryParams) => ({
         url: `/v1/emulations`,
         method: 'GET',
@@ -78,3 +78,4 @@ export const {
   useUpdateEmulatorMutation,
   useDeleteEmulatorMutation
 } = emulatorApi
+
