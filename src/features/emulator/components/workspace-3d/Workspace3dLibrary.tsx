@@ -69,7 +69,7 @@ export default function Workspace3dLibrary() {
   const [updateEmulation] = useUpdateEmulatorMutation()
   const [deleteEmulation] = useDeleteEmulatorMutation()
 
-  const emulations = data?.data.items || []
+  const emulations = data?.items || []
 
   const emulationOtptions = [
     { label: t('status.all'), value: 'all' },
@@ -254,3 +254,4 @@ export default function Workspace3dLibrary() {
     </div>
   )
 }
+

@@ -23,7 +23,7 @@ export default function StrawLabList() {
   })
 
   const { data, isLoading } = useSearchEmulationsQuery({})
-  const emulators = data?.data.items || []
+  const emulators = data?.items || []
 
   const onSelect = useCallback((api: EmblaCarouselType) => setSelected(api.selectedScrollSnap()), [])
   const onScroll = useCallback((api: EmblaCarouselType) => {
@@ -124,3 +124,4 @@ export default function StrawLabList() {
     </div>
   )
 }
+

@@ -63,7 +63,7 @@ export default function AdminCurriculumSelectEmulatorList({
   const [addEmulationToCurriculum] = useAddEmulationToCurriculumMutation()
   const rows = React.useMemo(
     () =>
-      (data?.data.items ?? []).map((item) => ({
+      (data?.items ?? []).map((item) => ({
         id: item.emulationId,
         ...item
       })),
@@ -119,3 +119,4 @@ export default function AdminCurriculumSelectEmulatorList({
     </div>
   )
 }
+
