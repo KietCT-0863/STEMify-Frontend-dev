@@ -106,7 +106,7 @@ export default function AdminCurriculumList() {
               </div>
             </CardLayout>
             {/* Temporary: Use simple button instead of dropdown for debugging */}
-            {(curriculum.status === CurriculumStatus.DRAFT || curriculum.status === 'Draft' || curriculum.status === 'DRAFT') && (
+            {curriculum.status === CurriculumStatus.DRAFT && (
               <div className='absolute top-2 right-2 z-10'>
                 <button
                   onClick={(e) => {
