@@ -105,8 +105,8 @@ export default function AdminCurriculumList() {
                 </Link>
               </div>
             </CardLayout>
-            {/* Temporary: Use simple button instead of dropdown for debugging */}
-            {curriculum.status === CurriculumStatus.DRAFT && (
+            {/* Publish button for Draft curriculum - case insensitive check */}
+            {curriculum.status?.toUpperCase() === 'DRAFT' && (
               <div className='absolute top-2 right-2 z-10'>
                 <button
                   onClick={(e) => {
