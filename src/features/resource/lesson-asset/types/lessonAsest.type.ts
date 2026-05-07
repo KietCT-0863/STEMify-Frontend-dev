@@ -31,7 +31,8 @@ export type LessonAssetSliceParams = {
 export enum LessonAssetType {
   IMAGE = 'image',
   VIDEO = 'video',
-  RAW = 'raw'
+  RAW = 'raw',
+  DOCUMENT = 'document'
 }
 
 export type PostLessonAssetRequestBody = {
