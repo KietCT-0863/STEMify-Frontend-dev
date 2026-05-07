@@ -49,7 +49,7 @@ export default function DocumentAssets() {
   const queryParams: LessonAssetSliceParams = {
     pageNumber: lessonAsset.pageNumber,
     pageSize: lessonAsset.pageSize,
-    type: LessonAssetType.RAW
+    type: LessonAssetType.DOCUMENT
   }
 
   const { data } = useGetListLessonAssetsQuery({

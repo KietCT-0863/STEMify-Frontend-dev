@@ -58,7 +58,7 @@ export default function AssetDetail() {
       return <video src={asset.assetUrl} controls className='mx-auto h-[200px] w-full rounded border bg-black' />
     }
 
-    if (type === 'raw') {
+    if (type === 'raw' || type === 'document') {
       return (
         <div className='flex h-fit w-fit flex-col items-center justify-center rounded-2xl border p-12'>
           {getFileIcon(asset.format?.toLowerCase(), 30)}
