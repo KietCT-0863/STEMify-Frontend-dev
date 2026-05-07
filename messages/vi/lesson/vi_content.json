@@ -1,5 +1,7 @@
 {
   "content": {
+    "loading": "Đang tải...",
+    "noData": "Không có dữ liệu",
     "list": {},
     "detail": {
       "title": "Nội dung",
