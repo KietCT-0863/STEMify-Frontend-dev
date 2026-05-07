@@ -73,6 +73,16 @@ export default function AdminCurriculumList() {
     return <SEmpty title={t('list.noData')} description={t('list.noDataDetail')} />
   }
 
+  // Debug: Log curriculum data
+  console.log('Curriculum data:', curriculumData?.data.items.map(c => ({ 
+    id: c.id, 
+    title: c.title, 
+    status: c.status,
+    statusType: typeof c.status,
+    isDraft: c.status === CurriculumStatus.DRAFT,
+    statusEnum: CurriculumStatus.DRAFT
+  })))
+
   return (
     <div className='mx-auto mt-5 mb-20 max-w-7xl'>
       <div className='grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4'>
@@ -95,27 +105,22 @@ export default function AdminCurriculumList() {
                 </Link>
               </div>
             </CardLayout>
-            {curriculum.status === CurriculumStatus.DRAFT && (
-              <div className='absolute top-2 right-2 flex flex-col items-center justify-center gap-1'>
-                <SDropDown
-                  trigger={
-                    <button className='flex items-center justify-center rounded-full border border-gray-200 bg-white p-1'>
-                      <EllipsisVertical className='h-3 w-3 text-gray-500' />
-                    </button>
-                  }
-                  items={[
-                    <button
-                      key='draft'
-                      onClick={() => {
-                        updateCurriculum({ id: curriculum.id, body: { status: CurriculumStatus.PUBLISHED } })
-                        toast.success(tt('successMessage.updateNoTitle'))
-                      }}
-                      className='text-sm'
-                    >
-                      {tc('button.publish')}
-                    </button>
-                  ]}
-                />
+            {/* Temporary: Use simple button instead of dropdown for debugging */}
+            {(curriculum.status === CurriculumStatus.DRAFT || curriculum.status === 'Draft' || curriculum.status === 'DRAFT') && (
+              <div className='absolute top-2 right-2 z-10'>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    e.preventDefault()
+                    if (confirm(`Publish "${curriculum.title}"?`)) {
+                      updateCurriculum({ id: curriculum.id, body: { status: CurriculumStatus.PUBLISHED } })
+                      toast.success(tt('successMessage.updateNoTitle'))
+                    }
+                  }}
+                  className='flex items-center gap-1 rounded-md border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50'
+                >
+                  📤 Publish
+                </button>
               </div>
             )}
           </div>
