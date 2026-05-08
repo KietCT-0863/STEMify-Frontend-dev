@@ -18,7 +18,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
   endpoints: (builder) => ({
     createAssignment: builder.mutation<ApiSuccessResponse<Assignment>, CreateAssignmentDto>({
       query: (body) => ({
-        url: '/assignments',
+        url: '',
         method: 'POST',
         body
       }),
@@ -28,7 +28,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     // Override update mutation with proper DTO type
     updateAssignment: builder.mutation<ApiSuccessResponse<Assignment>, { id: number; body: UpdateAssignmentDto }>({
       query: ({ id, body }) => ({
-        url: `/assignments/${id}`,
+        url: `/${id}`,
         method: 'PATCH',
         body
       }),
@@ -48,7 +48,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     }),
 
     getRubricCriterionById: builder.query<RubricCriterion, number>({
-      query: (id) => `rubric-criterions/${id}`,
+      query: (id) => `/rubric-criterions/${id}`,
       providesTags: (result, error, id) => [{ type: 'Assignment', id }]
     }),
 
@@ -86,7 +86,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
       }>,
       void
     >({
-      query: () => ({ url: `/assignments/template` })
+      query: () => ({ url: `/template` })
     }),
 
     importAssignmentCSV: builder.mutation<
@@ -95,7 +95,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     >({
       query: ({ csvFile, assignmentId }) => {
         return {
-          url: `/assignments/${assignmentId}/import`,
+          url: `/${assignmentId}/import`,
           method: 'POST',
           body: { csvFile }
         }
