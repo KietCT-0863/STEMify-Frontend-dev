@@ -45,6 +45,7 @@ export type CreateAssignmentDto = {
 }
 
 export type CreateAssignmentQuestionDto = {
+  id?: number // Optional ID for editing existing questions
   type: AssignmentQuestionType
   orderIndex: number
   points: number
@@ -59,16 +60,16 @@ export type CreateRubricCriterionDto = {
 
 // ================== Update DTOs ===================
 export type UpdateAssignmentDto = {
-  contentId: number
-  title: string
-  passingScore: number
-  durationDays: number
+  title?: string
+  passingScore?: number
+  durationDays?: number
+  cooldownHours?: number
   questions: UpdateAssignmentQuestionDto[]
 }
 
 export type UpdateAssignmentQuestionDto = {
   id?: number
-  type: string
+  type: AssignmentQuestionType
   orderIndex: number
   points: number
   content: string

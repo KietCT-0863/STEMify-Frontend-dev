@@ -82,6 +82,7 @@ export default function UpsertAssignment({ onSuccess }: UpsertAssignmentProps) {
         durationDays: a.durationDays,
         cooldownHours: a.cooldownHours,
         questions: a.questions.map((q) => ({
+          ...(q.id && { id: q.id }), // Include id for existing questions
           type: q.type,
           orderIndex: q.orderIndex,
           points: q.points,
@@ -101,22 +102,27 @@ export default function UpsertAssignment({ onSuccess }: UpsertAssignmentProps) {
     onSubmit: async ({ value }) => {
       try {
         if (isEditing) {
-          if (!assignmentData?.data?.contentId) {
-            toast.error('Assignment content ID is missing')
-            return
-          }
+          // Backend UpdateAssignment expects: id, title, passingScore, durationDays, cooldownHours, questions with points
           const updatePayload = {
-            ...value,
-            sectionId: Number(sectionId),
-            contentId: assignmentData.data.contentId
+            title: value.title,
+            passingScore: value.passingScore,
+            durationDays: value.durationDays,
+            cooldownHours: value.cooldownHours,
+            questions: value.questions.map((q) => ({
+              id: (q as any).id, // Include ID if exists for update
+              type: q.type,
+              orderIndex: q.orderIndex,
+              content: q.content,
+              points: q.rubricCriterion.reduce((sum, r) => sum + r.maxPoints, 0) // Calculate points from rubric
+            }))
           }
-          toast.info('Update functionality coming soon')
-          // await updateAssignment({ id: Number(assignmentId), body: updatePayload }).unwrap()
+          await updateAssignment({ id: Number(assignmentId), body: updatePayload }).unwrap()
+          toast.success(tt('successMessage.update', { title: value.title }))
         } else {
           const payload: CreateAssignmentDto = { ...value, sectionId: Number(sectionId) }
           const res = await createAssignment(payload).unwrap()
           router.push(`/${locale}/admin/lesson/${lessonId}/section/${sectionId}/assignment/${res.data.id}`)
-          toast.success(`Assignment created successfully`)
+          toast.success(tt('successMessage.create', { title: res.data.title }))
         }
 
         onSuccess?.()
