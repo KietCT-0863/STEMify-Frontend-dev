@@ -18,7 +18,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
   endpoints: (builder) => ({
     createAssignment: builder.mutation<ApiSuccessResponse<Assignment>, CreateAssignmentDto>({
       query: (body) => ({
-        url: '',
+        url: '/api/assignments',
         method: 'POST',
         body
       }),
@@ -28,7 +28,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     // Override update mutation with proper DTO type
     updateAssignment: builder.mutation<ApiSuccessResponse<Assignment>, { id: number; body: UpdateAssignmentDto }>({
       query: ({ id, body }) => ({
-        url: `/${id}`,
+        url: `/api/assignments/${id}`,
         method: 'PATCH',
         body
       }),
@@ -38,7 +38,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     // Rubric Criterion endpoints
     searchRubricCriteria: builder.query<RubricCriterion[], AssignmentQueryParams>({
       query: (params) => ({
-        url: '/rubric-criterions',
+        url: '/api/rubric-criterions',
         params
       }),
       providesTags: (result) =>
@@ -48,13 +48,13 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     }),
 
     getRubricCriterionById: builder.query<RubricCriterion, number>({
-      query: (id) => `/rubric-criterions/${id}`,
+      query: (id) => `/api/rubric-criterions/${id}`,
       providesTags: (result, error, id) => [{ type: 'Assignment', id }]
     }),
 
     createRubricCriterion: builder.mutation<RubricCriterion, Partial<RubricCriterion>>({
       query: (body) => ({
-        url: '/rubric-criterions',
+        url: '/api/rubric-criterions',
         method: 'POST',
         body
       }),
@@ -63,7 +63,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
 
     updateRubricCriterion: builder.mutation<RubricCriterion, { id: number; body: Partial<RubricCriterion> }>({
       query: ({ id, body }) => ({
-        url: `/rubric-criterions/${id}`,
+        url: `/api/rubric-criterions/${id}`,
         method: 'PATCH',
         body
       }),
@@ -72,7 +72,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
 
     deleteRubricCriterion: builder.mutation<{ success: boolean; id: number }, number>({
       query: (id) => ({
-        url: `/rubric-criterions/${id}`,
+        url: `/api/rubric-criterions/${id}`,
         method: 'DELETE'
       }),
       invalidatesTags: (result, error, id) => [{ type: 'Assignment', id }]
@@ -86,7 +86,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
       }>,
       void
     >({
-      query: () => ({ url: `/template` })
+      query: () => ({ url: `/api/assignments/template` })
     }),
 
     importAssignmentCSV: builder.mutation<
@@ -95,7 +95,7 @@ export const assignmentApi = createCrudApi<Assignment, AssignmentQueryParams>({
     >({
       query: ({ csvFile, assignmentId }) => {
         return {
-          url: `/${assignmentId}/import`,
+          url: `/api/assignments/${assignmentId}/import`,
           method: 'POST',
           body: { csvFile }
         }
