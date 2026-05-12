@@ -134,11 +134,18 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
         query: (params) => {
           const { dynamicUrl, queryParams } = handleDynamicUrl(normalizedBaseUrl, params)
 
+          // Convert sortDirection from string to number if present
+          let sortDirectionValue = queryParams.sortDirection
+          if (typeof sortDirectionValue === 'string') {
+            sortDirectionValue = sortDirectionValue.toLowerCase() === 'desc' ? 1 : 0
+          }
+
           // Filter out empty string values to avoid backend parsing errors
           const filteredParams = Object.entries({
             pageNumber: queryParams.pageNumber ?? 1,
             pageSize: queryParams.pageSize ?? 10,
-            ...queryParams
+            ...queryParams,
+            sortDirection: sortDirectionValue
           }).reduce((acc, [key, value]) => {
             // Only include non-empty values
             if (value !== '' && value !== null && value !== undefined) {
