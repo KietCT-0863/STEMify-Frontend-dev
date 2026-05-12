@@ -134,14 +134,23 @@ export function createCrudApi<T, P extends SearchPaginatedRequestParams>({
         query: (params) => {
           const { dynamicUrl, queryParams } = handleDynamicUrl(normalizedBaseUrl, params)
 
+          // Filter out empty string values to avoid backend parsing errors
+          const filteredParams = Object.entries({
+            pageNumber: queryParams.pageNumber ?? 1,
+            pageSize: queryParams.pageSize ?? 10,
+            ...queryParams
+          }).reduce((acc, [key, value]) => {
+            // Only include non-empty values
+            if (value !== '' && value !== null && value !== undefined) {
+              acc[key] = value
+            }
+            return acc
+          }, {} as Record<string, any>)
+
           return {
             url: dynamicUrl,
             method: 'GET',
-            params: {
-              pageNumber: queryParams.pageNumber ?? 1,
-              pageSize: queryParams.pageSize ?? 10,
-              ...queryParams
-            }
+            params: filteredParams
           }
         },
         providesTags: tagTypes
