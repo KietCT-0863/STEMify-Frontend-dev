@@ -35,6 +35,8 @@
           "label": "Hiển Thị Cho Học Viên"
         }
       }
-    }
+    },
+    "deleteSuccess": "Đã xóa chuyên mục \"{title}\" thành công",
+    "deleteError": "Không thể xóa chuyên mục \"{title}\". Vui lòng thử lại"
   }
 }

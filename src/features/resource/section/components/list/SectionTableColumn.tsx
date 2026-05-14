@@ -19,12 +19,12 @@ export default function useGetSectionTableColumn(): ColumnDef<Section>[] {
   const userRole = useAppSelector((state) => state.selectedOrganization.currentRole)
 
   const [deleteSection] = useDeleteSectionMutation()
-  const handleDelete = async (sectionId: number) => {
+  const handleDelete = async (sectionId: number, sectionTitle: string) => {
     try {
       await deleteSection(sectionId).unwrap()
-      toast.success(tc('successMessage.delete'))
+      toast.success(t('deleteSuccess', { title: sectionTitle }))
     } catch (err) {
-      toast.error(tc('errorMessage'))
+      toast.error(t('deleteError', { title: sectionTitle }))
     }
   }
 
@@ -92,7 +92,7 @@ export default function useGetSectionTableColumn(): ColumnDef<Section>[] {
               onClick={() =>
                 openModal('confirm', {
                   message: tt('confirmMessage.delete', { title: row.original.title }),
-                  onConfirm: () => handleDelete(row.original.id)
+                  onConfirm: () => handleDelete(row.original.id, row.original.title)
                 })
               }
             />

@@ -35,6 +35,8 @@
           "label": "Visible to Students"
         }
       }
-    }
+    },
+    "deleteSuccess": "Section \"{title}\" deleted successfully",
+    "deleteError": "Failed to delete section \"{title}\". Please try again"
   }
 }
